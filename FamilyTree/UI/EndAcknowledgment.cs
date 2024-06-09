@@ -60,9 +60,8 @@ namespace FamilyTree.UI
             int causeID = selectedCause.Value;
             var selectedPlace = (ComboBoxItem)cbPlaces.SelectedItem;
             int burialPlaceID = selectedPlace.Value;
-            DateTime selectedDate = dateOfDieBox.Value;
-            string stringDate = selectedDate.ToString("dd/MM/yyyy");
-            bool result = member.AddMemberDeath(memberID, stringDate, causeID, burialPlaceID);
+            DateTime dieDate = dateOfDieBox.Value;
+            bool result = member.AddMemberDeath(memberID, dieDate, causeID, burialPlaceID);
             if (result)
             {
                 MessageBox.Show("Member death added successfully!");

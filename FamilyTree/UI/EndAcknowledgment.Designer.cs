@@ -116,6 +116,7 @@
             // 
             // dateOfDieBox
             // 
+            this.dateOfDieBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateOfDieBox.Location = new System.Drawing.Point(72, 245);
             this.dateOfDieBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfDieBox.Name = "dateOfDieBox";

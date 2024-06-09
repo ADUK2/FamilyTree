@@ -31,15 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tbFullname = new System.Windows.Forms.TextBox();
-            this.genderComboBox = new System.Windows.Forms.ComboBox();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             this.dateOfBirthBox = new System.Windows.Forms.DateTimePicker();
-            this.dateOfDeathBox = new System.Windows.Forms.DateTimePicker();
-            this.checkboxAlive = new System.Windows.Forms.CheckBox();
             this.cbOccupations = new System.Windows.Forms.ComboBox();
             this.cancelFormButton = new System.Windows.Forms.Button();
             this.tbAddress = new System.Windows.Forms.TextBox();
@@ -89,17 +86,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Giới Tính";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(737, 255);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(313, 29);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ngày tháng năm mất (nếu có)";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -141,46 +127,26 @@
             this.tbFullname.Size = new System.Drawing.Size(279, 22);
             this.tbFullname.TabIndex = 9;
             // 
-            // genderComboBox
+            // cbGender
             // 
-            this.genderComboBox.FormattingEnabled = true;
-            this.genderComboBox.Items.AddRange(new object[] {
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.genderComboBox.Location = new System.Drawing.Point(743, 180);
-            this.genderComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(160, 24);
-            this.genderComboBox.TabIndex = 11;
+            this.cbGender.Location = new System.Drawing.Point(743, 180);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(160, 24);
+            this.cbGender.TabIndex = 11;
             // 
             // dateOfBirthBox
             // 
+            this.dateOfBirthBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateOfBirthBox.Location = new System.Drawing.Point(124, 300);
             this.dateOfBirthBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfBirthBox.Name = "dateOfBirthBox";
             this.dateOfBirthBox.Size = new System.Drawing.Size(240, 22);
             this.dateOfBirthBox.TabIndex = 12;
-            // 
-            // dateOfDeathBox
-            // 
-            this.dateOfDeathBox.Location = new System.Drawing.Point(853, 300);
-            this.dateOfDeathBox.Margin = new System.Windows.Forms.Padding(4);
-            this.dateOfDeathBox.Name = "dateOfDeathBox";
-            this.dateOfDeathBox.Size = new System.Drawing.Size(220, 22);
-            this.dateOfDeathBox.TabIndex = 13;
-            // 
-            // checkboxAlive
-            // 
-            this.checkboxAlive.AutoSize = true;
-            this.checkboxAlive.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkboxAlive.Location = new System.Drawing.Point(743, 300);
-            this.checkboxAlive.Margin = new System.Windows.Forms.Padding(4);
-            this.checkboxAlive.Name = "checkboxAlive";
-            this.checkboxAlive.Size = new System.Drawing.Size(93, 24);
-            this.checkboxAlive.TabIndex = 14;
-            this.checkboxAlive.Text = "Còn sống";
-            this.checkboxAlive.UseVisualStyleBackColor = true;
-            this.checkboxAlive.CheckedChanged += new System.EventHandler(this.aliveCheckBox_CheckedChanged);
             // 
             // cbOccupations
             // 
@@ -276,7 +242,8 @@
             this.lbRelationships.Text = "Mối quan hệ";
             // 
             // dateOfEventBox
-            // 
+            //
+            this.dateOfEventBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateOfEventBox.Location = new System.Drawing.Point(780, 689);
             this.dateOfEventBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfEventBox.Name = "dateOfEventBox";
@@ -319,15 +286,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cancelFormButton);
             this.Controls.Add(this.cbOccupations);
-            this.Controls.Add(this.checkboxAlive);
-            this.Controls.Add(this.dateOfDeathBox);
             this.Controls.Add(this.dateOfBirthBox);
-            this.Controls.Add(this.genderComboBox);
+            this.Controls.Add(this.cbGender);
             this.Controls.Add(this.tbFullname);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -344,15 +308,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbFullname;
-        private System.Windows.Forms.ComboBox genderComboBox;
+        private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.DateTimePicker dateOfBirthBox;
-        private System.Windows.Forms.DateTimePicker dateOfDeathBox;
-        private System.Windows.Forms.CheckBox checkboxAlive;
         private System.Windows.Forms.ComboBox cbOccupations;
         private System.Windows.Forms.Button cancelFormButton;
         private System.Windows.Forms.TextBox tbAddress;

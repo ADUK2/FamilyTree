@@ -119,6 +119,7 @@
             // 
             // dateOfEventBox
             // 
+            this.dateOfEventBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateOfEventBox.Location = new System.Drawing.Point(25, 256);
             this.dateOfEventBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfEventBox.Name = "dateOfEventBox";

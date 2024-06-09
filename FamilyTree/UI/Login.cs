@@ -37,10 +37,10 @@ namespace FamilyTree.UI
                 MessageBox.Show("Login successful!");
                 // Mở form chính hoặc thực hiện các hành động khác sau khi đăng nhập thành công
                 this.Hide();
-                /*FirstTimeLogin firstTimeLogin = new FirstTimeLogin();
-                firstTimeLogin.Show();*/
-                Achievements achievements = new Achievements();
-                achievements.Show();
+                FirstTimeLogin firstTimeLogin = new FirstTimeLogin();
+                firstTimeLogin.Show();
+                /*Achievements achievements = new Achievements();
+                achievements.Show();*/
                 /*EndAcknowledgment endAcknowledgment = new EndAcknowledgment();
                 endAcknowledgment.Show();*/
             }

@@ -22,20 +22,18 @@ namespace FamilyTree.UI
             LoadOccupationTitles();
             LoadRelationshipTitles();
             LoadOldMember();
+            LoadRelationshipsTitles();
 
             // Check member
             if (!CheckExistingMembers())
             {
                 HideExistingMemberFields();
             }
-
-            // sự kiện checkbox Alive
-            checkboxAlive.CheckedChanged += aliveCheckBox_CheckedChanged;
         }
 
         private void LoadOldMember()
         {
-            List<Member> members = member.GetAllMembers();
+            List<Member> members = member.GetRootMembers();
             foreach(var member in members)
             {
                 cbOldmember.Items.Add(new ComboBoxItem { Text = member.Name, Value= member.ID});
@@ -95,7 +93,7 @@ namespace FamilyTree.UI
         private void LoadHometownsTitles()
         {
             
-            Dictionary<int, string> titles = member.GetDeathcausesTitles();
+            Dictionary<int, string> titles = member.GetHometownsTitles();
             foreach (var title in titles)
             {
                 // Thêm một mục mới vào ComboBox với giá trị ID và tiêu đề tương ứng
@@ -113,6 +111,15 @@ namespace FamilyTree.UI
             }
         }
 
+        private void LoadRelationshipsTitles()
+        {
+            Dictionary<int, string> titles = member.GetRelationshipsTitles();
+            foreach ( var title in titles)
+            {
+                cbRelationships.Items.Add(new ComboBoxItem { Text = title.Value, Value=title.Key });
+            }
+        }
+
         private void LoadRelationshipTitles()
         {
             Dictionary<int, string> titles = member.GetRelationshipsTitles();
@@ -125,14 +132,96 @@ namespace FamilyTree.UI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            var oldmember = (ComboBoxItem)cbOldmember.SelectedItem;
-            int id = oldmember.Value;
-            MessageBox.Show("ID Old Member:" + id);
+            
+            if(!CheckExistingMembers())
+            {
+                // Lấy thông tin từ các điều khiển
+                string fullName = tbFullname.Text;
+                string gender = cbGender.SelectedItem?.ToString();
+                DateTime birthDate = dateOfBirthBox.Value;
+                string address = tbAddress.Text;
+                var selectedHometown = (ComboBoxItem)cbHometowns.SelectedItem;
+                int hometownID = selectedHometown.Value;
+                //int hometownID = (int)cbHometowns.SelectedValue;
+                var selectedOccupation = (ComboBoxItem)cbOccupations.SelectedItem;
+                int occupationID = selectedOccupation.Value;
+
+                // Kiểm tra các thông tin bắt buộc
+                if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0)
+                {
+                    MessageBox.Show("Please fill in all required fields.");
+                    return;
+                }
+
+                // Xác định giá trị isRoot
+                bool isRoot = true; // Giả sử relationshipTypeID = 1 đại diện cho quan hệ "con"
+                Member member = new Member();
+                int newMemberID = member.AddMember(fullName, gender, birthDate, address, occupationID, hometownID, isRoot);
+
+                if (newMemberID > 0)
+                {
+                    MessageBox.Show("Member added successfully!");
+                    LoadOldMember(); // Tải lại danh sách thành viên cũ có isRoot = 1
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add member.");
+                }
+
+
+
+            }
+            else
+            {
+                // Lấy thông tin từ các điều khiển
+                string fullName = tbFullname.Text;
+                string gender = cbGender.SelectedItem?.ToString();
+                DateTime birthDate = dateOfBirthBox.Value;
+                string address = tbAddress.Text;
+                var selectedHometown = (ComboBoxItem)cbHometowns.SelectedItem;
+                int hometownID = selectedHometown.Value;
+                //int hometownID = (int)cbHometowns.SelectedValue;
+                var selectedOccupation = (ComboBoxItem)cbOccupations.SelectedItem;
+                int occupationID = selectedOccupation.Value;
+                //int occupationID = (int)cbOccupations.SelectedValue;
+                var selectedOldmember = (ComboBoxItem)cbOldmember.SelectedItem;
+                int oldMemberID = selectedOldmember.Value;
+                // int oldMemberID = (int)cbOldmember.SelectedValue;
+                var selectedRelationship = (ComboBoxItem)cbRelationships.SelectedItem;
+                int relationshipTypeID = selectedRelationship.Value;
+                //int relationshipTypeID = (int)cbRelationships.SelectedValue;
+                DateTime eventDate = dateOfEventBox.Value;
+
+                // Kiểm tra các thông tin bắt buộc
+                if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0)
+                {
+                    MessageBox.Show("Please fill in all required fields.");
+                    return;
+                }
+
+                // Xác định giá trị isRoot
+                bool isRoot = (relationshipTypeID == 1); // Giả sử relationshipTypeID = 1 đại diện cho quan hệ "con"
+
+                // Tạo đối tượng Member và thêm vào cơ sở dữ liệu
+                Member member = new Member();
+                int newMemberID = member.AddMember(fullName, gender, birthDate, address, occupationID, hometownID, isRoot);
+
+                // Nếu thêm thành công, thêm mối quan hệ
+                if (newMemberID > 0)
+                {
+                    member.AddRelationship(newMemberID, oldMemberID, relationshipTypeID, eventDate);
+
+                    MessageBox.Show("Member added successfully!");
+                    LoadOldMember(); // Tải lại danh sách thành viên cũ có isRoot = 1
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add member.");
+                }
+            }    
+            
         }
 
-        private void aliveCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            dateOfDeathBox.Visible = !checkboxAlive.Checked;
-        }
+        
     }
 }

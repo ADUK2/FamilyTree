@@ -51,9 +51,8 @@ namespace FamilyTree.UI
             int memberID = selectedMember.Value;
             var selectedAchievement = (ComboBoxItem)cbAchievements.SelectedItem;
             int achivementID = selectedAchievement.Value;
-            DateTime selectedDate = dateOfEventBox.Value;
-            string stringDate = selectedDate.ToString("dd/MM/yyyy");
-            bool result = member.AddAchievement(memberID, achivementID, stringDate);
+            DateTime eventDate = dateOfEventBox.Value;
+            bool result = member.AddAchievement(memberID, achivementID, eventDate);
             if (result)
             {
                 MessageBox.Show("Member Achivement added successfully!");

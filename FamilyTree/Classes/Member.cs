@@ -21,20 +21,26 @@ namespace FamilyTree.Classes
         public string Occupation { get; set; }
         public string Address { get; set; }
 
-        public void AddMember(string name, string gender, DateTime birthDate, string hometown, string occupation, string address)
+        public int AddMember(string fullName, string gender, DateTime birthDate, string address, int occupationID, int hometownID, bool isRoot)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO Members (Name, Gender, BirthDate, Hometown, Occupation, Address) VALUES (@Name, @Gender, @BirthDate, @Hometown, @Occupation, @Address)";
+
+                string query = "INSERT INTO Members (FullName, Gender, BirthDate, Address, OccupationID, HometownID, isRoot) " +
+                               "VALUES (@FullName, @Gender, @BirthDate, @Address, @OccupationID, @HometownID, @isRoot); " +
+                               "SELECT CAST(scope_identity() AS int)";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Name", name);
+                command.Parameters.AddWithValue("@FullName", fullName);
                 command.Parameters.AddWithValue("@Gender", gender);
                 command.Parameters.AddWithValue("@BirthDate", birthDate);
-                command.Parameters.AddWithValue("@Hometown", hometown);
-                command.Parameters.AddWithValue("@Occupation", occupation);
                 command.Parameters.AddWithValue("@Address", address);
-                command.ExecuteNonQuery();
+                command.Parameters.AddWithValue("@OccupationID", occupationID);
+                command.Parameters.AddWithValue("@HometownID", hometownID);
+                command.Parameters.AddWithValue("@isRoot", isRoot);
+
+                int newMemberID = (int)command.ExecuteScalar();
+                return newMemberID;
             }
         }
 
@@ -93,6 +99,32 @@ namespace FamilyTree.Classes
             }
             return members;
         }
+
+        public List<Member> GetRootMembers()
+        {
+            List<Member> members = new List<Member>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT MemberID, FullName, Gender, BirthDate, HometownID, OccupationID, Address FROM Members WHERE isRoot = 1";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    members.Add(new Member
+                    {
+                        ID = reader.GetInt32(0),
+                        Name = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                        Gender = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                        BirthDate = reader.IsDBNull(3) ? DateTime.MinValue : reader.GetDateTime(3),
+                        Hometown = reader.IsDBNull(4) ? string.Empty : reader.GetInt32(4).ToString(),
+                        Occupation = reader.IsDBNull(5) ? string.Empty : reader.GetInt32(5).ToString(),
+                        Address = reader.IsDBNull(6) ? string.Empty : reader.GetString(6)
+                    });
+                }
+            }
+            return members;
+        }
         // Lấy danh sách thành tích
         public Dictionary<int, string> GetAchievementTitles()
         {
@@ -113,7 +145,7 @@ namespace FamilyTree.Classes
             return achievements;
         }
         // Thêm thành tích vào cơ sở dữ liệu
-        public bool AddAchievement(int memberID, int achievementID, string achievementDate)
+        public bool AddAchievement(int memberID, int achievementID, DateTime achievementDate)
         {
             try
             {
@@ -134,7 +166,7 @@ namespace FamilyTree.Classes
             }       
         }
         // Thêm kết thúc vào cơ sở dữ liệu
-        public bool AddMemberDeath(int memberID, string deathDate, int causeID, int burialPlaceID)
+        public bool AddMemberDeath(int memberID, DateTime deathDate, int causeID, int burialPlaceID)
         {
             try
             {
@@ -198,7 +230,33 @@ namespace FamilyTree.Classes
                 return false;
             }
         }
+        // thêm mối quan hệ
+        public bool AddRelationship(int memberID1, int memberID2, int relationshipID, DateTime eventDate)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                string query = "INSERT INTO MemberRelationships (MemberID1, MemberID2, RelationshipID, EventDate) " +
+                               "VALUES (@MemberID1, @MemberID2, @RelationshipID, @EventDate)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MemberID1", memberID1);
+                command.Parameters.AddWithValue("@MemberID2", memberID2);
+                command.Parameters.AddWithValue("@RelationshipID", relationshipID);
+                command.Parameters.AddWithValue("@EventDate", eventDate);
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    // Log hoặc xử lý lỗi nếu cần
+                    return false;
+                }
+            }
+        }
         // Lấy danh sách quê quán
         public Dictionary<int, string> GetHometownsTitles()
         {
