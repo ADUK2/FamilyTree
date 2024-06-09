@@ -47,9 +47,21 @@ namespace FamilyTree.UI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            var selectedMember = (ComboBoxItem)cbMembers.SelectedItem;
+            int memberID = selectedMember.Value;
             var selectedAchievement = (ComboBoxItem)cbAchievements.SelectedItem;
-            int achievementsID = selectedAchievement.Value;
-            MessageBox.Show("Selected Achievement ID: " + achievementsID);
+            int achivementID = selectedAchievement.Value;
+            DateTime selectedDate = dateOfEventBox.Value;
+            string stringDate = selectedDate.ToString("dd/MM/yyyy");
+            bool result = member.AddAchievement(memberID, achivementID, stringDate);
+            if (result)
+            {
+                MessageBox.Show("Member Achivement added successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Failed to add member achivement.");
+            }
         }
     }
 

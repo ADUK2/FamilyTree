@@ -61,8 +61,8 @@ namespace FamilyTree.UI
             var selectedPlace = (ComboBoxItem)cbPlaces.SelectedItem;
             int burialPlaceID = selectedPlace.Value;
             DateTime selectedDate = dateOfDieBox.Value;
-            DateTime deathDate = new DateTime(selectedDate.Year, selectedDate.Month, selectedDate.Day);
-            /*bool result = member.AddMemberDeath(memberID, deathDate, causeID, burialPlaceID);
+            string stringDate = selectedDate.ToString("dd/MM/yyyy");
+            bool result = member.AddMemberDeath(memberID, stringDate, causeID, burialPlaceID);
             if (result)
             {
                 MessageBox.Show("Member death added successfully!");
@@ -70,8 +70,7 @@ namespace FamilyTree.UI
             else
             {
                 MessageBox.Show("Failed to add member death.");
-            }*/
-            MessageBox.Show("Death Date:" + deathDate);
+            }
         }
     }
 }

@@ -35,7 +35,7 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.cbAchievements = new System.Windows.Forms.ComboBox();
-            this.dateTimeArisingdate = new System.Windows.Forms.DateTimePicker();
+            this.dateOfEventBox = new System.Windows.Forms.DateTimePicker();
             this.cbMembers = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -117,13 +117,13 @@
             this.cbAchievements.Size = new System.Drawing.Size(302, 24);
             this.cbAchievements.TabIndex = 6;
             // 
-            // dateTimeArisingdate
+            // dateOfEventBox
             // 
-            this.dateTimeArisingdate.Location = new System.Drawing.Point(25, 256);
-            this.dateTimeArisingdate.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimeArisingdate.Name = "dateTimeArisingdate";
-            this.dateTimeArisingdate.Size = new System.Drawing.Size(302, 22);
-            this.dateTimeArisingdate.TabIndex = 8;
+            this.dateOfEventBox.Location = new System.Drawing.Point(25, 256);
+            this.dateOfEventBox.Margin = new System.Windows.Forms.Padding(4);
+            this.dateOfEventBox.Name = "dateOfEventBox";
+            this.dateOfEventBox.Size = new System.Drawing.Size(302, 22);
+            this.dateOfEventBox.TabIndex = 8;
             // 
             // cbMembers
             // 
@@ -140,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 455);
             this.Controls.Add(this.cbMembers);
-            this.Controls.Add(this.dateTimeArisingdate);
+            this.Controls.Add(this.dateOfEventBox);
             this.Controls.Add(this.cbAchievements);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Save);
@@ -165,7 +165,7 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.ComboBox cbAchievements;
-        private System.Windows.Forms.DateTimePicker dateTimeArisingdate;
+        private System.Windows.Forms.DateTimePicker dateOfEventBox;
         private System.Windows.Forms.ComboBox cbMembers;
     }
 }

@@ -113,14 +113,14 @@ namespace FamilyTree.Classes
             return achievements;
         }
         // Thêm thành tích vào cơ sở dữ liệu
-        public bool AddAchievement(int memberID, int achievementID, DateTime achievementDate)
+        public bool AddAchievement(int memberID, int achievementID, string achievementDate)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO Achievements (MemberID, AchievementID, AchievementDate) VALUES (@MemberID, @AchievementID, @AchievementDate)";
+                    string query = "INSERT INTO MemberAchievements (MemberID, AchievementID, AchievementDate) VALUES (@MemberID, @AchievementID, @AchievementDate)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@MemberID", memberID);
                     command.Parameters.AddWithValue("@AchievementID", achievementID);
@@ -134,7 +134,7 @@ namespace FamilyTree.Classes
             }       
         }
         // Thêm kết thúc vào cơ sở dữ liệu
-        public bool AddMemberDeath(int memberID, DateTime deathDate, int causeID, int burialPlaceID)
+        public bool AddMemberDeath(int memberID, string deathDate, int causeID, int burialPlaceID)
         {
             try
             {
@@ -142,7 +142,7 @@ namespace FamilyTree.Classes
                 {
                     connection.Open();
 
-                    // Kiểm tra xem memberID có tồn tại không
+                    /*// Kiểm tra xem memberID có tồn tại không
                     string checkMemberQuery = "SELECT COUNT(*) FROM Members WHERE ID = @MemberID";
                     SqlCommand checkMemberCommand = new SqlCommand(checkMemberQuery, connection);
                     checkMemberCommand.Parameters.AddWithValue("@MemberID", memberID);
@@ -180,7 +180,7 @@ namespace FamilyTree.Classes
                     if (deathDate <= birthDate)
                     {
                         throw new Exception("Death date must be after the birth date.");
-                    }
+                    }*/
 
                     // Chèn thông tin về cái chết của thành viên
                     string query = "INSERT INTO MemberDeaths (MemberID, DeathDate, CauseID, BurialPlaceID) VALUES (@MemberID, @DeathDate, @CauseID, @BurialPlaceID)";
