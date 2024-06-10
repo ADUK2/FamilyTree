@@ -119,8 +119,14 @@
     <EmbeddedResource Include="UI\EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormYearlyReport.resx">
+      <DependentUpon>FormYearlyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ListMembers.resx">
+      <DependentUpon>ListMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MemberListForm.resx">
       <DependentUpon>MemberListForm.cs</DependentUpon>

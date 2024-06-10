@@ -40,8 +40,9 @@ namespace FamilyTree.UI
             // Thêm dữ liệu mới vào DataGridView
             foreach (Member member in members)
             {
+                string formattedDate = member.BirthDate.HasValue ? member.BirthDate.Value.ToString("dd/MM/yyyy") : "";
                 // Thêm một hàng mới với dữ liệu tương ứng
-                dataGridView1.Rows.Add(member.MemberID,member.Name, member.Gender, member.BirthDate.ToString(), member.Address);
+                dataGridView1.Rows.Add(member.MemberID,member.Name, member.Gender, formattedDate, member.Address);
             }
         }
 

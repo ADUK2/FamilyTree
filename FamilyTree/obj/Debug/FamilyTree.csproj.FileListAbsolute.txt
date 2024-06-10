@@ -31,3 +31,5 @@ C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\Family
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.EditMember.resources
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.ListMembers.resources
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.FormYearlyReport.resources

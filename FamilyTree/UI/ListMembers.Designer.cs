@@ -40,14 +40,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(758, 480);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 400);
             this.dataGridView1.TabIndex = 0;
             // 
             // btn_Edit
             // 
-            this.btn_Edit.Location = new System.Drawing.Point(12, 510);
+            this.btn_Edit.Location = new System.Drawing.Point(484, 430);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(120, 40);
+            this.btn_Edit.Size = new System.Drawing.Size(86, 40);
             this.btn_Edit.TabIndex = 1;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = true;
@@ -55,14 +55,17 @@
             // 
             // ListMembers
             // 
-            this.ClientSize = new System.Drawing.Size(782, 603);
+            this.ClientSize = new System.Drawing.Size(582, 482);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListMembers";
             this.Text = "List Members";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+
         }
+
+
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_Edit;

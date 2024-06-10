@@ -72,7 +72,14 @@ namespace FamilyTree.UI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+            var selectedHometown = (ComboBoxItem)cbHometowns.SelectedItem;
+            int hometownID = selectedHometown.Value;
+            var selectedOccupation = (ComboBoxItem)cbOccupations.SelectedItem;
+            int OccupationID = selectedOccupation.Value;
+            member.HometownID = hometownID;
+            member.OccupationID = OccupationID;
+            member.UpdateMember(member);
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

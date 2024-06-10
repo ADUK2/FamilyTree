@@ -85,12 +85,12 @@
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.RowHeadersWidth = 51;
             this.dgvReport.RowTemplate.Height = 24;
-            this.dgvReport.Size = new System.Drawing.Size(776, 339);
+            this.dgvReport.Size = new System.Drawing.Size(558, 339);
             this.dgvReport.TabIndex = 4;
             // 
             // FormYearlyReport
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(582, 450);
             this.Controls.Add(this.dgvReport);
             this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.dtpToYear);

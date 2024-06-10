@@ -87,7 +87,7 @@
             // 
             this.btn_Save.BackColor = System.Drawing.Color.Aqua;
             this.btn_Save.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(392, 385);
+            this.btn_Save.Location = new System.Drawing.Point(392, 310);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(131, 48);
@@ -100,7 +100,7 @@
             // 
             this.btn_Cancel.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Cancel.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(562, 385);
+            this.btn_Cancel.Location = new System.Drawing.Point(562, 310);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(131, 48);
@@ -151,11 +151,11 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Achievements";
-            this.Text = "Achievements";
+            this.Text = "Ghi Nhận Thành Tích";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
         #endregion
 
         private System.Windows.Forms.Label label1;
