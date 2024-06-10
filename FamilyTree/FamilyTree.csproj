@@ -57,6 +57,12 @@
     <Compile Include="UI\FormYearlyReport.Designer.cs">
       <DependentUpon>FormYearlyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\MemberListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MemberListForm.Designer.cs">
+      <DependentUpon>MemberListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Register.cs">
       <SubType>Form</SubType>
     </Compile>

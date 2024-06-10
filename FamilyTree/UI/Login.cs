@@ -43,8 +43,10 @@ namespace FamilyTree.UI
                 achievements.Show();*/
                 /*EndAcknowledgment endAcknowledgment = new EndAcknowledgment();
                 endAcknowledgment.Show();*/
-                FormYearlyReport formYearlyReport = new FormYearlyReport();
-                formYearlyReport.Show();
+                /*FormYearlyReport formYearlyReport = new FormYearlyReport();
+                formYearlyReport.Show();*/
+                MemberListForm form = new MemberListForm();
+                form.Show();
             }
             else
             {
