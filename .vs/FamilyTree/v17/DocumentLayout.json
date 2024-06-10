@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "D:\\Family_Tree\\FamilyTree\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|D:\\Family_Tree\\FamilyTree\\familytree\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|d:\\family_tree\\familytree\\familytree\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|d:\\family_tree\\familytree\\familytree\\ui\\endacknowledgment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\endacknowledgment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|d:\\family_tree\\familytree\\familytree\\ui\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|d:\\family_tree\\familytree\\familytree\\ui\\achievements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\achievements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|d:\\family_tree\\familytree\\familytree\\ui\\memberinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\memberinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|D:\\Family_Tree\\FamilyTree\\familytree\\ui\\firsttimelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\firsttimelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|D:\\Family_Tree\\FamilyTree\\familytree\\ui\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\homescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|D:\\Family_Tree\\FamilyTree\\familytree\\familytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\familytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|D:\\Family_Tree\\FamilyTree\\familytree\\familytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\familytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|d:\\family_tree\\familytree\\familytree\\ui\\firsttimelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{636E0857-1AE3-4DF2-A78E-35D4BC351844}|FamilyTree\\FamilyTree.csproj|solutionrelative:familytree\\ui\\firsttimelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,42 +22,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EndAcknowledgment.cs [Design]",
-              "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\EndAcknowledgment.cs",
-              "RelativeDocumentMoniker": "FamilyTree\\UI\\EndAcknowledgment.cs",
-              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\EndAcknowledgment.cs [Design]",
-              "RelativeToolTip": "FamilyTree\\UI\\EndAcknowledgment.cs [Design]",
+              "Title": "Register.cs [Design]",
+              "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\Register.cs",
+              "RelativeDocumentMoniker": "FamilyTree\\UI\\Register.cs",
+              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\Register.cs [Design]",
+              "RelativeToolTip": "FamilyTree\\UI\\Register.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T11:26:35.407Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Achievements.cs [Design]",
-              "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\Achievements.cs",
-              "RelativeDocumentMoniker": "FamilyTree\\UI\\Achievements.cs",
-              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\Achievements.cs [Design]",
-              "RelativeToolTip": "FamilyTree\\UI\\Achievements.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T10:08:52.597Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MemberInformation.cs [Design]",
-              "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\MemberInformation.cs",
-              "RelativeDocumentMoniker": "FamilyTree\\UI\\MemberInformation.cs",
-              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\MemberInformation.cs [Design]",
-              "RelativeToolTip": "FamilyTree\\UI\\MemberInformation.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T11:32:19.739Z",
+              "WhenOpened": "2024-06-10T10:09:04.411Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -89,53 +49,21 @@
               "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\Login.cs [Design]",
               "RelativeToolTip": "FamilyTree\\UI\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T10:26:56.119Z",
+              "WhenOpened": "2024-06-10T10:08:54.896Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FirstTimeLogin.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "FirstTimeLogin.cs",
               "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\FirstTimeLogin.cs",
               "RelativeDocumentMoniker": "FamilyTree\\UI\\FirstTimeLogin.cs",
-              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\FirstTimeLogin.cs [Design]",
-              "RelativeToolTip": "FamilyTree\\UI\\FirstTimeLogin.cs [Design]",
+              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\FirstTimeLogin.cs",
+              "RelativeToolTip": "FamilyTree\\UI\\FirstTimeLogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T10:42:13.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeScreen.cs [Design]",
-              "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\HomeScreen.cs",
-              "RelativeDocumentMoniker": "FamilyTree\\UI\\HomeScreen.cs",
-              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\UI\\HomeScreen.cs [Design]",
-              "RelativeToolTip": "FamilyTree\\UI\\HomeScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T10:27:09.921Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FamilyTree.cs",
-              "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\FamilyTree.cs",
-              "RelativeDocumentMoniker": "FamilyTree\\FamilyTree.cs",
-              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\FamilyTree.cs",
-              "RelativeToolTip": "FamilyTree\\FamilyTree.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAB2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T09:22:43.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FamilyTree.cs [Design]",
-              "DocumentMoniker": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\FamilyTree.cs",
-              "RelativeDocumentMoniker": "FamilyTree\\FamilyTree.cs",
-              "ToolTip": "D:\\Family_Tree\\FamilyTree\\FamilyTree\\FamilyTree.cs [Design]",
-              "RelativeToolTip": "FamilyTree\\FamilyTree.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T02:53:56.02Z"
+              "WhenOpened": "2024-06-10T10:07:04.262Z",
+              "EditorCaption": ""
             }
           ]
         }
