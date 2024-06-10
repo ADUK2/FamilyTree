@@ -51,6 +51,12 @@
   <ItemGroup>
     <Compile Include="Classes\Account.cs" />
     <Compile Include="Classes\Member.cs" />
+    <Compile Include="UI\FormYearlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormYearlyReport.Designer.cs">
+      <DependentUpon>FormYearlyReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Register.cs">
       <SubType>Form</SubType>
     </Compile>

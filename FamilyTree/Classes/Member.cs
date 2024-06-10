@@ -21,14 +21,14 @@ namespace FamilyTree.Classes
         public string Occupation { get; set; }
         public string Address { get; set; }
 
-        public int AddMember(string fullName, string gender, DateTime birthDate, string address, int occupationID, int hometownID, bool isRoot)
+        public int AddMember(string fullName, string gender, DateTime birthDate, string address, int occupationID, int hometownID, bool isRoot, int generation)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                string query = "INSERT INTO Members (FullName, Gender, BirthDate, Address, OccupationID, HometownID, isRoot) " +
-                               "VALUES (@FullName, @Gender, @BirthDate, @Address, @OccupationID, @HometownID, @isRoot); " +
+                string query = "INSERT INTO Members (FullName, Gender, BirthDate, Address, OccupationID, HometownID, isRoot, Generation) " +
+                               "VALUES (@FullName, @Gender, @BirthDate, @Address, @OccupationID, @HometownID, @isRoot, @Generation); " +
                                "SELECT CAST(scope_identity() AS int)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@FullName", fullName);
@@ -38,9 +38,24 @@ namespace FamilyTree.Classes
                 command.Parameters.AddWithValue("@OccupationID", occupationID);
                 command.Parameters.AddWithValue("@HometownID", hometownID);
                 command.Parameters.AddWithValue("@isRoot", isRoot);
+                command.Parameters.AddWithValue("@Generation", generation);
 
                 int newMemberID = (int)command.ExecuteScalar();
                 return newMemberID;
+            }
+        }
+
+        public int GetMemberGeneration(int memberID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT Generation FROM Members WHERE MemberID = @MemberID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MemberID", memberID);
+
+                return (int)command.ExecuteScalar();
             }
         }
 

@@ -34,6 +34,7 @@ namespace FamilyTree.UI
         private void LoadOldMember()
         {
             List<Member> members = member.GetRootMembers();
+            cbOldmember.Items.Clear();
             foreach(var member in members)
             {
                 cbOldmember.Items.Add(new ComboBoxItem { Text = member.Name, Value= member.ID});
@@ -132,8 +133,8 @@ namespace FamilyTree.UI
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            
-            if(!CheckExistingMembers())
+
+            if (!CheckExistingMembers())
             {
                 // Lấy thông tin từ các điều khiển
                 string fullName = tbFullname.Text;
@@ -142,7 +143,6 @@ namespace FamilyTree.UI
                 string address = tbAddress.Text;
                 var selectedHometown = (ComboBoxItem)cbHometowns.SelectedItem;
                 int hometownID = selectedHometown.Value;
-                //int hometownID = (int)cbHometowns.SelectedValue;
                 var selectedOccupation = (ComboBoxItem)cbOccupations.SelectedItem;
                 int occupationID = selectedOccupation.Value;
 
@@ -153,10 +153,13 @@ namespace FamilyTree.UI
                     return;
                 }
 
-                // Xác định giá trị isRoot
-                bool isRoot = true; // Giả sử relationshipTypeID = 1 đại diện cho quan hệ "con"
+                // Xác định giá trị isRoot và Generation
+                bool isRoot = true;
+                int generation = 1; // Đời 1 nếu không có thành viên nào tồn tại
+
+                // Tạo đối tượng Member và thêm vào cơ sở dữ liệu
                 Member member = new Member();
-                int newMemberID = member.AddMember(fullName, gender, birthDate, address, occupationID, hometownID, isRoot);
+                int newMemberID = member.AddMember(fullName, gender, birthDate, address, occupationID, hometownID, isRoot, generation);
 
                 if (newMemberID > 0)
                 {
@@ -167,9 +170,6 @@ namespace FamilyTree.UI
                 {
                     MessageBox.Show("Failed to add member.");
                 }
-
-
-
             }
             else
             {
@@ -180,17 +180,15 @@ namespace FamilyTree.UI
                 string address = tbAddress.Text;
                 var selectedHometown = (ComboBoxItem)cbHometowns.SelectedItem;
                 int hometownID = selectedHometown.Value;
-                //int hometownID = (int)cbHometowns.SelectedValue;
                 var selectedOccupation = (ComboBoxItem)cbOccupations.SelectedItem;
                 int occupationID = selectedOccupation.Value;
-                //int occupationID = (int)cbOccupations.SelectedValue;
                 var selectedOldmember = (ComboBoxItem)cbOldmember.SelectedItem;
                 int oldMemberID = selectedOldmember.Value;
-                // int oldMemberID = (int)cbOldmember.SelectedValue;
                 var selectedRelationship = (ComboBoxItem)cbRelationships.SelectedItem;
                 int relationshipTypeID = selectedRelationship.Value;
-                //int relationshipTypeID = (int)cbRelationships.SelectedValue;
                 DateTime eventDate = dateOfEventBox.Value;
+
+                Member member = new Member();
 
                 // Kiểm tra các thông tin bắt buộc
                 if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0)
@@ -202,9 +200,13 @@ namespace FamilyTree.UI
                 // Xác định giá trị isRoot
                 bool isRoot = (relationshipTypeID == 1); // Giả sử relationshipTypeID = 1 đại diện cho quan hệ "con"
 
+                // Xác định giá trị Generation
+                int oldMemberGeneration = member.GetMemberGeneration(oldMemberID);
+                int generation = (relationshipTypeID == 1) ? oldMemberGeneration + 1 : oldMemberGeneration;
+
                 // Tạo đối tượng Member và thêm vào cơ sở dữ liệu
-                Member member = new Member();
-                int newMemberID = member.AddMember(fullName, gender, birthDate, address, occupationID, hometownID, isRoot);
+                
+                int newMemberID = member.AddMember(fullName, gender, birthDate, address, occupationID, hometownID, isRoot, generation);
 
                 // Nếu thêm thành công, thêm mối quan hệ
                 if (newMemberID > 0)
@@ -218,8 +220,8 @@ namespace FamilyTree.UI
                 {
                     MessageBox.Show("Failed to add member.");
                 }
-            }    
-            
+            }
+
         }
 
         
