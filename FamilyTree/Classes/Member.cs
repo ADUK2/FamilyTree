@@ -1,5 +1,6 @@
 ﻿using FamilyTree.UI;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,13 +14,15 @@ namespace FamilyTree.Classes
     {
         private string connectionString = "Data Source=WIN-124DGHNTBQA;Initial Catalog=FamilyTreeDB;Integrated Security=True";
 
-        public int ID { get; set; }
+        public int MemberID { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string Hometown { get; set; }
-        public string Occupation { get; set; }
+        public DateTime? BirthDate { get; set; }
         public string Address { get; set; }
+        public int OccupationID { get; set; }
+        public int HometownID { get; set; }
+        public bool isRoot { get; set; }
+        public int Generation { get; set; }
 
         public int AddMember(string fullName, string gender, DateTime birthDate, string address, int occupationID, int hometownID, bool isRoot, int generation)
         {
@@ -59,20 +62,54 @@ namespace FamilyTree.Classes
             }
         }
 
-        public void UpdateMember(int id, string name, string gender, DateTime birthDate, string hometown, string occupation, string address)
+        public  Member LoadMember(int id)
+        {
+            string query = "SELECT * FROM Members WHERE MemberID = @MemberID";
+            Member member = null;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@MemberID", id);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // Khởi tạo một đối tượng Member và gán thông tin từ dữ liệu đọc được
+                    member = new Member()
+                    {
+                        MemberID = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Gender = reader.GetString(2),
+                        BirthDate = reader.IsDBNull(3) ? (DateTime?)null : reader.GetDateTime(3),
+                        Address = reader.GetString(4),
+                        OccupationID = reader.GetInt32(5),
+                        HometownID = reader.GetInt32(6),
+                        isRoot = reader.GetBoolean(7),
+                        Generation = reader.GetInt32(8)
+                    };
+                }
+            }
+
+            return member;
+        }
+
+        public void UpdateMember(Member member)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                string query = "UPDATE Members SET Name = @Name, Gender = @Gender, BirthDate = @BirthDate, Hometown = @Hometown, Occupation = @Occupation, Address = @Address WHERE ID = @ID";
+                string query = "UPDATE Members SET FullName = @FullName, Gender = @Gender, BirthDate = @BirthDate, Address = @Address, OccupationID = @OccupationID, HometownID = @HometownID WHERE MemberID = @MemberID";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ID", id);
-                command.Parameters.AddWithValue("@Name", name);
-                command.Parameters.AddWithValue("@Gender", gender);
-                command.Parameters.AddWithValue("@BirthDate", birthDate);
-                command.Parameters.AddWithValue("@Hometown", hometown);
-                command.Parameters.AddWithValue("@Occupation", occupation);
-                command.Parameters.AddWithValue("@Address", address);
+                command.Parameters.AddWithValue("@FullName", member.Name);
+                command.Parameters.AddWithValue("@Gender", member.Gender);
+                command.Parameters.AddWithValue("@BirthDate", member.BirthDate);
+                command.Parameters.AddWithValue("@Address", member.Address);
+                command.Parameters.AddWithValue("@OccupationID", member.OccupationID);
+                command.Parameters.AddWithValue("@HometownID", member.HometownID);
+                command.Parameters.AddWithValue("@MemberID", member.MemberID);
+                connection.Open();
                 command.ExecuteNonQuery();
             }
         }
@@ -92,28 +129,37 @@ namespace FamilyTree.Classes
         public List<Member> GetAllMembers()
         {
             List<Member> members = new List<Member>();
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                string query = "SELECT MemberID, FullName, Gender, BirthDate, HometownID, OccupationID, Address FROM Members";
+                string query = "SELECT MemberID, FullName, Gender, BirthDate, Address, OccupationID, HometownID, isRoot, Generation FROM Members";
                 SqlCommand command = new SqlCommand(query, connection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    members.Add(new Member
+                    while (reader.Read())
                     {
-                        ID = reader.GetInt32(0),
-                        Name = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                        Gender = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-                        BirthDate = reader.IsDBNull(3) ? DateTime.MinValue : reader.GetDateTime(3),
-                        Hometown = reader.IsDBNull(4) ? string.Empty : reader.GetInt32(4).ToString(),
-                        Occupation = reader.IsDBNull(5) ? string.Empty : reader.GetInt32(5).ToString(),
-                        Address = reader.IsDBNull(6) ? string.Empty : reader.GetString(6)
-                    });
+                        Member member = new Member
+                        {
+                            MemberID = reader.GetInt32(0),
+                            Name = reader.GetString(1),
+                            Gender = reader.GetString(2),
+                            BirthDate = reader.IsDBNull(3) ? (DateTime?)null : reader.GetDateTime(3),
+                            Address = reader.GetString(4),
+                            OccupationID = reader.GetInt32(5),
+                            HometownID = reader.GetInt32(6),
+                            isRoot = reader.GetBoolean(7),
+                            Generation = reader.GetInt32(8)
+                        };
+                        members.Add(member);
+                    }
                 }
             }
             return members;
         }
+
+
 
         public List<Member> GetRootMembers()
         {
@@ -121,25 +167,28 @@ namespace FamilyTree.Classes
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT MemberID, FullName, Gender, BirthDate, HometownID, OccupationID, Address FROM Members WHERE isRoot = 1";
+                string query = "SELECT MemberID, FullName, Gender, BirthDate, HometownID, OccupationID, Address, Generation FROM Members WHERE isRoot = 1";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     members.Add(new Member
                     {
-                        ID = reader.GetInt32(0),
-                        Name = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                        Gender = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-                        BirthDate = reader.IsDBNull(3) ? DateTime.MinValue : reader.GetDateTime(3),
-                        Hometown = reader.IsDBNull(4) ? string.Empty : reader.GetInt32(4).ToString(),
-                        Occupation = reader.IsDBNull(5) ? string.Empty : reader.GetInt32(5).ToString(),
-                        Address = reader.IsDBNull(6) ? string.Empty : reader.GetString(6)
+                        MemberID = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Gender = reader.GetString(2),
+                        BirthDate = reader.IsDBNull(3) ? (DateTime?)null : reader.GetDateTime(3),
+                        Address = reader.GetString(6),
+                        OccupationID = reader.GetInt32(5),
+                        HometownID = reader.GetInt32(4),
+                        isRoot = true, // Giá trị mặc định
+                        Generation = reader.GetInt32(7) // Kiểm tra chỉ số cột cho Generation
                     });
                 }
             }
             return members;
         }
+
         // Lấy danh sách thành tích
         public Dictionary<int, string> GetAchievementTitles()
         {

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace FamilyTree.UI
 {
-    public partial class EndAcknowledgment : Form
+    public partial class AddMemberDeath : Form
     {
         Member member = new Member();
-        public EndAcknowledgment()
+        public AddMemberDeath()
         {
             InitializeComponent();
             LoadMember();
@@ -48,7 +48,7 @@ namespace FamilyTree.UI
             List<Member> members = member.GetAllMembers();
             foreach (var member in members)
             {
-                cbMembers.Items.Add(new ComboBoxItem { Text = member.Name, Value = member.ID });
+                cbMembers.Items.Add(new ComboBoxItem { Text = member.Name, Value = member.MemberID });
             }
         }
 

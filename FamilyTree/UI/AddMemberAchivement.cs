@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace FamilyTree.UI
 {
-    public partial class Achievements : Form
+    public partial class AddMemberAchivement : Form
     {
 
         Member member = new Member();
 
-        public Achievements()
+        public AddMemberAchivement()
         {
             InitializeComponent();
             LoadAchievements();
@@ -29,7 +29,7 @@ namespace FamilyTree.UI
             List<Member> members = member.GetAllMembers();
             foreach (var member in members)
             {
-                cbMembers.Items.Add(new ComboBoxItem { Text = member.Name, Value = member.ID });
+                cbMembers.Items.Add(new ComboBoxItem { Text = member.Name, Value = member.MemberID });
             }
         }
 
@@ -62,8 +62,8 @@ namespace FamilyTree.UI
                 MessageBox.Show("Failed to add member achivement.");
             }
         }
+        
     }
-
     public class ComboBoxItem
     {
         public string Text { get; set; }

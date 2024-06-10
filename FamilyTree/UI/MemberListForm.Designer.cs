@@ -40,14 +40,16 @@ namespace FamilyTree.UI
             this.ColumnParent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             this.SuspendLayout();
-
-            // Khởi tạo textBoxSearch
+            // 
+            // textBoxSearch
+            // 
             this.textBoxSearch.Location = new System.Drawing.Point(12, 12);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(250, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(250, 22);
             this.textBoxSearch.TabIndex = 0;
-
-            // Khởi tạo buttonSearch
+            // 
+            // buttonSearch
+            // 
             this.buttonSearch.Location = new System.Drawing.Point(268, 10);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
@@ -55,46 +57,64 @@ namespace FamilyTree.UI
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
-
-            // Khởi tạo dataGridViewMembers
+            // 
+            // dataGridViewMembers
+            // 
             this.dataGridViewMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-        this.ColumnSTT,
-        this.ColumnFullName,
-        this.ColumnBirthDate,
-        this.ColumnGeneration,
-        this.ColumnParent});
-            this.dataGridViewMembers.Location = new System.Drawing.Point(12, 50);
+            this.ColumnSTT,
+            this.ColumnFullName,
+            this.ColumnBirthDate,
+            this.ColumnGeneration,
+            this.ColumnParent});
+            this.dataGridViewMembers.Location = new System.Drawing.Point(68, 50);
             this.dataGridViewMembers.Name = "dataGridViewMembers";
-            this.dataGridViewMembers.Size = new System.Drawing.Size(776, 388);
+            this.dataGridViewMembers.RowHeadersWidth = 51;
+            this.dataGridViewMembers.Size = new System.Drawing.Size(679, 297);
             this.dataGridViewMembers.TabIndex = 2;
-
-            // Khai báo và khởi tạo cột STT
+            // 
+            // ColumnSTT
+            // 
             this.ColumnSTT.HeaderText = "STT";
+            this.ColumnSTT.MinimumWidth = 6;
             this.ColumnSTT.Name = "ColumnSTT";
             this.ColumnSTT.ReadOnly = true;
-
-            // Khai báo và khởi tạo cột Họ Tên
+            this.ColumnSTT.Width = 125;
+            // 
+            // ColumnFullName
+            // 
             this.ColumnFullName.HeaderText = "Họ Tên";
+            this.ColumnFullName.MinimumWidth = 6;
             this.ColumnFullName.Name = "ColumnFullName";
             this.ColumnFullName.ReadOnly = true;
-
-            // Khai báo và khởi tạo cột Ngày Sinh
+            this.ColumnFullName.Width = 125;
+            // 
+            // ColumnBirthDate
+            // 
             this.ColumnBirthDate.HeaderText = "Ngày Sinh";
+            this.ColumnBirthDate.MinimumWidth = 6;
             this.ColumnBirthDate.Name = "ColumnBirthDate";
             this.ColumnBirthDate.ReadOnly = true;
-
-            // Khai báo và khởi tạo cột Đời
+            this.ColumnBirthDate.Width = 125;
+            // 
+            // ColumnGeneration
+            // 
             this.ColumnGeneration.HeaderText = "Đời";
+            this.ColumnGeneration.MinimumWidth = 6;
             this.ColumnGeneration.Name = "ColumnGeneration";
             this.ColumnGeneration.ReadOnly = true;
-
-            // Khai báo và khởi tạo cột Cha/Mẹ
+            this.ColumnGeneration.Width = 125;
+            // 
+            // ColumnParent
+            // 
             this.ColumnParent.HeaderText = "Cha/Mẹ";
+            this.ColumnParent.MinimumWidth = 6;
             this.ColumnParent.Name = "ColumnParent";
             this.ColumnParent.ReadOnly = true;
-
-            // Khởi tạo form
+            this.ColumnParent.Width = 125;
+            // 
+            // MemberListForm
+            // 
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridViewMembers);
             this.Controls.Add(this.buttonSearch);
@@ -104,6 +124,7 @@ namespace FamilyTree.UI
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }        
         #endregion
     }

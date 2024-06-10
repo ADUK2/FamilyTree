@@ -1,6 +1,6 @@
 ﻿namespace FamilyTree.UI
 {
-    partial class Achievements
+    partial class AddMemberAchivement
     {
         /// <summary>
         /// Required designer variable.
@@ -156,7 +156,6 @@
             this.PerformLayout();
 
         }
-
         #endregion
 
         private System.Windows.Forms.Label label1;

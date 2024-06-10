@@ -1,6 +1,6 @@
 ﻿namespace FamilyTree.UI
 {
-    partial class EndAcknowledgment
+    partial class AddMemberDeath
     {
         /// <summary>
         /// Required designer variable.
@@ -44,8 +44,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Small", 18F);
-            this.label1.Location = new System.Drawing.Point(352, 9);
+            this.label1.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(240, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(302, 43);
@@ -56,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 105);
+            this.label2.Location = new System.Drawing.Point(50, 100);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 29);
@@ -67,7 +67,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(689, 105);
+            this.label3.Location = new System.Drawing.Point(450, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 29);
@@ -78,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(67, 201);
+            this.label4.Location = new System.Drawing.Point(50, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 29);
@@ -89,7 +89,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(67, 311);
+            this.label5.Location = new System.Drawing.Point(50, 300);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(206, 29);
@@ -99,35 +99,35 @@
             // cbCauses
             // 
             this.cbCauses.FormattingEnabled = true;
-            this.cbCauses.Location = new System.Drawing.Point(694, 153);
+            this.cbCauses.Location = new System.Drawing.Point(455, 150);
             this.cbCauses.Margin = new System.Windows.Forms.Padding(4);
             this.cbCauses.Name = "cbCauses";
-            this.cbCauses.Size = new System.Drawing.Size(160, 24);
+            this.cbCauses.Size = new System.Drawing.Size(250, 24);
             this.cbCauses.TabIndex = 6;
             // 
             // cbPlaces
             // 
             this.cbPlaces.FormattingEnabled = true;
-            this.cbPlaces.Location = new System.Drawing.Point(292, 315);
+            this.cbPlaces.Location = new System.Drawing.Point(300, 305);
             this.cbPlaces.Margin = new System.Windows.Forms.Padding(4);
             this.cbPlaces.Name = "cbPlaces";
-            this.cbPlaces.Size = new System.Drawing.Size(273, 24);
+            this.cbPlaces.Size = new System.Drawing.Size(405, 24);
             this.cbPlaces.TabIndex = 7;
             // 
             // dateOfDieBox
             // 
             this.dateOfDieBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateOfDieBox.Location = new System.Drawing.Point(72, 245);
+            this.dateOfDieBox.Location = new System.Drawing.Point(55, 245);
             this.dateOfDieBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfDieBox.Name = "dateOfDieBox";
-            this.dateOfDieBox.Size = new System.Drawing.Size(265, 22);
+            this.dateOfDieBox.Size = new System.Drawing.Size(300, 22);
             this.dateOfDieBox.TabIndex = 8;
             // 
             // btn_Cancel
             // 
             this.btn_Cancel.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Cancel.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(847, 394);
+            this.btn_Cancel.Location = new System.Drawing.Point(450, 400);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(131, 48);
@@ -139,7 +139,7 @@
             // 
             this.btn_Save.BackColor = System.Drawing.Color.Aqua;
             this.btn_Save.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(677, 394);
+            this.btn_Save.Location = new System.Drawing.Point(290, 400);
             this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(131, 48);
@@ -151,17 +151,17 @@
             // cbMembers
             // 
             this.cbMembers.FormattingEnabled = true;
-            this.cbMembers.Location = new System.Drawing.Point(72, 153);
+            this.cbMembers.Location = new System.Drawing.Point(55, 150);
             this.cbMembers.Margin = new System.Windows.Forms.Padding(4);
             this.cbMembers.Name = "cbMembers";
-            this.cbMembers.Size = new System.Drawing.Size(265, 24);
+            this.cbMembers.Size = new System.Drawing.Size(300, 24);
             this.cbMembers.TabIndex = 11;
             // 
             // EndAcknowledgment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 471);
+            this.ClientSize = new System.Drawing.Size(782, 603);
             this.Controls.Add(this.cbMembers);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Save);
@@ -178,8 +178,10 @@
             this.Text = "EndAcknowledgment";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+
+
 
         #endregion
 

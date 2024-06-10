@@ -68,8 +68,7 @@ namespace FamilyTree
                 this.Close(); // Đóng form đăng ký sau khi đăng ký thành công
                 //FirstTimeLogin firstTimeLogin = new FirstTimeLogin();
                 //firstTimeLogin.Show();
-                Achievements achievements = new Achievements();
-                achievements.Show();
+                
             }
             catch (Exception ex)
             {

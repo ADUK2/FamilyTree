@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace FamilyTree.UI
 {
-    public partial class FirstTimeLogin : Form
+    public partial class AddMember : Form
     {
         private Member member = new Member();
-        public FirstTimeLogin()
+        public AddMember()
         {
             InitializeComponent();
             LoadHometownsTitles();
@@ -37,7 +37,7 @@ namespace FamilyTree.UI
             cbOldmember.Items.Clear();
             foreach(var member in members)
             {
-                cbOldmember.Items.Add(new ComboBoxItem { Text = member.Name, Value= member.ID});
+                cbOldmember.Items.Add(new ComboBoxItem { Text = member.Name, Value= member.MemberID});
             }
         }
 
@@ -223,7 +223,5 @@ namespace FamilyTree.UI
             }
 
         }
-
-        
     }
 }
