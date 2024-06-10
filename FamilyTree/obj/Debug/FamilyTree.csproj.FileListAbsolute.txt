@@ -4,7 +4,6 @@ D:\Family_Tree\FamilyTree\FamilyTree\bin\Debug\FamilyTree.pdb
 D:\Family_Tree\FamilyTree\FamilyTree\bin\Debug\System.Data.SqlClient.dll
 D:\Family_Tree\FamilyTree\FamilyTree\bin\Debug\System.Data.SqlClient.xml
 D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.AssemblyReference.cache
-D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.FamilyTree.resources
 D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.Properties.Resources.resources
 D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.GenerateResource.cache
 D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CoreCompileInputs.cache
@@ -30,6 +29,15 @@ C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\Family
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CopyComplete
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
+<<<<<<< HEAD
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.EditMember.resources
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.ListMembers.resources
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.FormYearlyReport.resources
+=======
+D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.Register.resources
+D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.Achievements.resources
+D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.EndAcknowledgment.resources
+D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.FirstTimeLogin.resources
+D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.Login.resources
+D:\Family_Tree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.MemberInformation.resources
+>>>>>>> 56e07d58d6fe825374405b08b2a1ab68088ebed3
