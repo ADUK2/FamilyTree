@@ -38,14 +38,19 @@
             this.btnAddMemberAchivement = new System.Windows.Forms.Button();
             this.btnAddMemberDeath = new System.Windows.Forms.Button();
             this.btnYearlyReport = new System.Windows.Forms.Button();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelSubMember.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.panelSideMenu.Controls.Add(this.panel1);
             this.panelSideMenu.Controls.Add(this.btnYearlyReport);
             this.panelSideMenu.Controls.Add(this.btnAddMemberDeath);
             this.panelSideMenu.Controls.Add(this.btnAddMemberAchivement);
@@ -184,6 +189,34 @@
             this.btnYearlyReport.UseVisualStyleBackColor = true;
             this.btnYearlyReport.Click += new System.EventHandler(this.btnYearlyReport_Click);
             // 
+            // tbSearch
+            // 
+            this.tbSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbSearch.Location = new System.Drawing.Point(0, 0);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(250, 22);
+            this.tbSearch.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.tbSearch);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 360);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 23);
+            this.panel1.TabIndex = 9;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSearch.Location = new System.Drawing.Point(175, 0);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,6 +228,8 @@
             this.Text = "HomeScreen";
             this.panelSideMenu.ResumeLayout(false);
             this.panelSubMember.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +246,8 @@
         private System.Windows.Forms.Button btnAddMemberAchivement;
         private System.Windows.Forms.Button btnAddMemberDeath;
         private System.Windows.Forms.Button btnYearlyReport;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox tbSearch;
     }
 }
