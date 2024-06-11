@@ -84,20 +84,16 @@ CREATE TABLE MemberDeaths (
     FOREIGN KEY (BurialPlaceID) REFERENCES BurialPlaces(PlaceID)
 );
 
+-- Bảng Users
 CREATE TABLE Users (
-    UserID INT PRIMARY KEY IDENTITY(1,1),
-    Username NVARCHAR(100) NOT NULL UNIQUE,
-    Password NVARCHAR(100) NOT NULL
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(100) NOT NULL,
+    Password NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(100) UNIQUE,
+    VerificationCode NVARCHAR(10),
+    VerificationExpiry DATETIME
 );
 
-
-CREATE TABLE AchievementStatistics (
-    Year INT,
-    AchievementID INT,
-    AchievementCount INT,
-    PRIMARY KEY (Year, AchievementID),
-    FOREIGN KEY (AchievementID) REFERENCES Achievements(AchievementID)
-);
 
 
 --INSERT DATA
