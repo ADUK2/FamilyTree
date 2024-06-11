@@ -16,7 +16,7 @@ namespace FamilyTree.UI
         public Login()
         {
             InitializeComponent();
-            bunifuTextBoxPassword.TextChanged += bunifuTextBoxPassword_TextChange;
+            tbPassword.TextChanged += bunifuTextBoxPassword_TextChange;
         }
 
         private void lbRegister_Click(object sender, EventArgs e)
@@ -28,8 +28,8 @@ namespace FamilyTree.UI
 
         private void bunifuThinButtonLogin_Click(object sender, EventArgs e)
         {
-            string username = bunifuTextBoxUsername.Text;
-            string password = bunifuTextBoxPassword.Text;
+            string username = tbUsername.Text;
+            string password = tbPassword.Text;
 
             Account account = new Account();
             bool isAuthenticated = account.Login(username, password);
@@ -63,7 +63,7 @@ namespace FamilyTree.UI
 
         private void bunifuTextBoxPassword_TextChange(object sender, EventArgs e)
         {
-            string password = bunifuTextBoxPassword.Text;
+            string password = tbPassword.Text;
             bool isStrong = CheckPasswordStrength(password);
 
             if (isStrong)
@@ -117,6 +117,11 @@ namespace FamilyTree.UI
         private void bunifuThinButtonLogin_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
