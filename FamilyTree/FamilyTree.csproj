@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Account.cs" />
+    <Compile Include="Classes\EmailService.cs" />
     <Compile Include="Classes\Member.cs" />
     <Compile Include="UI\AddMemberAchivement.cs">
       <SubType>Form</SubType>

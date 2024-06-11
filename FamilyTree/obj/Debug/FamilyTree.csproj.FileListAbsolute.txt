@@ -44,3 +44,9 @@ C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\Family
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\FamilyTree.exe.config
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\FamilyTree.exe
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\FamilyTree.pdb
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CopyComplete

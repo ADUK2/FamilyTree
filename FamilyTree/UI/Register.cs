@@ -199,5 +199,10 @@ namespace FamilyTree
             // Kiểm tra xem hai mật khẩu có giống nhau hay không
             return password == confirmPassword;
         }
+
+        private void bunifuThinButtonRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,7 +17,9 @@ namespace FamilyTree
         public string Username { get; set; }
         public string Password { get; set; }
 
-        public void AddAccount(string username, string password)
+        public string Email { get; set; }
+
+        public void AddAccount(string username, string email, string password)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -69,6 +71,65 @@ namespace FamilyTree
                 return count == 1;
             }
         }
+
+        public string GenerateVerificationCode()
+        {
+            Random random = new Random();
+            return random.Next(100000, 999999).ToString(); // Tạo mã xác nhận 6 chữ số
+        }
+        public void SaveVerificationCode(string email, string code)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE Users SET VerificationCode = @Code WHERE Email = @Email";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Code", code);
+                command.Parameters.AddWithValue("@Email", email);
+                command.ExecuteNonQuery();
+            }
+        }
+        public bool IsEmailExists(string email)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Email", email);
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
+        public bool VerifyCode(string email, string code)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND VerificationCode = @Code";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Email", email);
+                command.Parameters.AddWithValue("@Code", code);
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
+            }
+        }
+        public void ResetPassword(string email, string newPassword)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE Users SET Password = @NewPassword WHERE Email = @Email";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@NewPassword", newPassword); // Bạn nên mã hóa mật khẩu trước khi lưu
+                command.Parameters.AddWithValue("@Email", email);
+                command.ExecuteNonQuery();
+            }
+        }
+
+
+
     }
 
 }
