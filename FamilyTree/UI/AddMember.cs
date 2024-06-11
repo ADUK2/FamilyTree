@@ -223,5 +223,10 @@ namespace FamilyTree.UI
             }
 
         }
+
+        private void cancelFormButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

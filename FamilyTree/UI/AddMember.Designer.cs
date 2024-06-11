@@ -122,7 +122,7 @@
             // tbFullname
             // 
             this.tbFullname.Location = new System.Drawing.Point(27, 123);
-            this.tbFullname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbFullname.Margin = new System.Windows.Forms.Padding(4);
             this.tbFullname.Name = "tbFullname";
             this.tbFullname.Size = new System.Drawing.Size(345, 22);
             this.tbFullname.TabIndex = 9;
@@ -134,7 +134,7 @@
             "Nam",
             "Nữ"});
             this.cbGender.Location = new System.Drawing.Point(427, 123);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(160, 24);
             this.cbGender.TabIndex = 11;
@@ -143,7 +143,7 @@
             // 
             this.dateOfBirthBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateOfBirthBox.Location = new System.Drawing.Point(27, 209);
-            this.dateOfBirthBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateOfBirthBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfBirthBox.Name = "dateOfBirthBox";
             this.dateOfBirthBox.Size = new System.Drawing.Size(265, 22);
             this.dateOfBirthBox.TabIndex = 12;
@@ -152,7 +152,7 @@
             // 
             this.cbOccupations.FormattingEnabled = true;
             this.cbOccupations.Location = new System.Drawing.Point(27, 292);
-            this.cbOccupations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOccupations.Margin = new System.Windows.Forms.Padding(4);
             this.cbOccupations.Name = "cbOccupations";
             this.cbOccupations.Size = new System.Drawing.Size(345, 24);
             this.cbOccupations.TabIndex = 16;
@@ -162,17 +162,18 @@
             this.cancelFormButton.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelFormButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.cancelFormButton.Location = new System.Drawing.Point(587, 518);
-            this.cancelFormButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelFormButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelFormButton.Name = "cancelFormButton";
             this.cancelFormButton.Size = new System.Drawing.Size(129, 49);
             this.cancelFormButton.TabIndex = 19;
             this.cancelFormButton.Text = "Hủy";
             this.cancelFormButton.UseVisualStyleBackColor = true;
+            this.cancelFormButton.Click += new System.EventHandler(this.cancelFormButton_Click);
             // 
             // tbAddress
             // 
             this.tbAddress.Location = new System.Drawing.Point(27, 376);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(4);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(345, 22);
             this.tbAddress.TabIndex = 21;
@@ -192,7 +193,7 @@
             // 
             this.cbHometowns.FormattingEnabled = true;
             this.cbHometowns.Location = new System.Drawing.Point(427, 209);
-            this.cbHometowns.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbHometowns.Margin = new System.Windows.Forms.Padding(4);
             this.cbHometowns.Name = "cbHometowns";
             this.cbHometowns.Size = new System.Drawing.Size(289, 24);
             this.cbHometowns.TabIndex = 22;
@@ -202,7 +203,7 @@
             this.btn_Save.BackColor = System.Drawing.Color.Aqua;
             this.btn_Save.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.Location = new System.Drawing.Point(427, 518);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(131, 48);
             this.btn_Save.TabIndex = 23;
@@ -214,7 +215,7 @@
             // 
             this.cbOldmember.FormattingEnabled = true;
             this.cbOldmember.Location = new System.Drawing.Point(27, 460);
-            this.cbOldmember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOldmember.Margin = new System.Windows.Forms.Padding(4);
             this.cbOldmember.Name = "cbOldmember";
             this.cbOldmember.Size = new System.Drawing.Size(160, 24);
             this.cbOldmember.TabIndex = 24;
@@ -245,7 +246,7 @@
             // 
             this.dateOfEventBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateOfEventBox.Location = new System.Drawing.Point(443, 460);
-            this.dateOfEventBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateOfEventBox.Margin = new System.Windows.Forms.Padding(4);
             this.dateOfEventBox.Name = "dateOfEventBox";
             this.dateOfEventBox.Size = new System.Drawing.Size(265, 22);
             this.dateOfEventBox.TabIndex = 27;
@@ -265,7 +266,7 @@
             // 
             this.cbRelationships.FormattingEnabled = true;
             this.cbRelationships.Location = new System.Drawing.Point(251, 460);
-            this.cbRelationships.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRelationships.Margin = new System.Windows.Forms.Padding(4);
             this.cbRelationships.Name = "cbRelationships";
             this.cbRelationships.Size = new System.Drawing.Size(148, 24);
             this.cbRelationships.TabIndex = 29;
@@ -280,7 +281,7 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "Địa chỉ";
             // 
-            // FirstTimeLogin
+            // AddMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,9 +307,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FirstTimeLogin";
-            this.Text = "FirstTimeLogin";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "AddMember";
+            this.Text = "Tiếp nhận thành viên";
             this.ResumeLayout(false);
             this.PerformLayout();
 

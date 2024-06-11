@@ -67,3 +67,5 @@ D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.
 D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.Up2Date
 D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe
 D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\Bunifu.Licensing.dll
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe.licenses

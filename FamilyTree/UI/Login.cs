@@ -113,5 +113,10 @@ namespace FamilyTree.UI
             // Mật khẩu đủ mạnh
             return true;
         }
+
+        private void bunifuThinButtonLogin_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
