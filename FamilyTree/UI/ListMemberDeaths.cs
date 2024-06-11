@@ -89,7 +89,7 @@ namespace FamilyTree.UI
             }
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {

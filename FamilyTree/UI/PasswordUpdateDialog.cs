@@ -22,8 +22,8 @@ namespace FamilyTree.UI
             userEmail = email;
         }
 
-        
-        private void btnUpdatePassword_Click(object sender, EventArgs e)
+
+        private void btnUpdatePassword_Click_1(object sender, EventArgs e)
         {
             string newPassword = txtNewPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;

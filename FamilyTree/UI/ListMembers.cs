@@ -46,10 +46,8 @@ namespace FamilyTree.UI
             }
         }
 
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
-               
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 if (dataGridView1.SelectedRows.Count > 1)
@@ -66,7 +64,6 @@ namespace FamilyTree.UI
             {
                 MessageBox.Show("Hãy chọn thành viên bạn muốn chỉnh sửa.");
             }
-        }        
-
+        }
     }
 }

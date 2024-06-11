@@ -24,7 +24,7 @@ namespace FamilyTree.UI
         private void btnSendCode_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
-            
+
             try
             {
                 if (account.GenerateVerificationCode(email))
@@ -41,7 +41,6 @@ namespace FamilyTree.UI
             {
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
-
         }
 
         private void btnCheckCode_Click(object sender, EventArgs e)
