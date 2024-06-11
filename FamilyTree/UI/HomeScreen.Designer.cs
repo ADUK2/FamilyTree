@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeScreen));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnYearlyReport = new System.Windows.Forms.Button();
             this.panelSubMemberDeaths = new System.Windows.Forms.Panel();
@@ -43,11 +44,14 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
             this.panelSubMemberDeaths.SuspendLayout();
             this.panelSubMember.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -64,8 +68,9 @@
             this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 603);
+            this.panelSideMenu.Size = new System.Drawing.Size(251, 603);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btnYearlyReport
@@ -75,10 +80,11 @@
             this.btnYearlyReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYearlyReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYearlyReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
-            this.btnYearlyReport.Location = new System.Drawing.Point(0, 418);
+            this.btnYearlyReport.Location = new System.Drawing.Point(0, 421);
+            this.btnYearlyReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnYearlyReport.Name = "btnYearlyReport";
-            this.btnYearlyReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnYearlyReport.Size = new System.Drawing.Size(250, 45);
+            this.btnYearlyReport.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnYearlyReport.Size = new System.Drawing.Size(251, 46);
             this.btnYearlyReport.TabIndex = 16;
             this.btnYearlyReport.Text = "Báo cáo năm";
             this.btnYearlyReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,9 +97,10 @@
             this.panelSubMemberDeaths.Controls.Add(this.btnAddMemberDeath);
             this.panelSubMemberDeaths.Controls.Add(this.btnListMemberDeath);
             this.panelSubMemberDeaths.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMemberDeaths.Location = new System.Drawing.Point(0, 338);
+            this.panelSubMemberDeaths.Location = new System.Drawing.Point(0, 341);
+            this.panelSubMemberDeaths.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSubMemberDeaths.Name = "panelSubMemberDeaths";
-            this.panelSubMemberDeaths.Size = new System.Drawing.Size(250, 80);
+            this.panelSubMemberDeaths.Size = new System.Drawing.Size(251, 80);
             this.panelSubMemberDeaths.TabIndex = 14;
             // 
             // btnAddMemberDeath
@@ -104,10 +111,11 @@
             this.btnAddMemberDeath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMemberDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMemberDeath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
-            this.btnAddMemberDeath.Location = new System.Drawing.Point(0, 40);
+            this.btnAddMemberDeath.Location = new System.Drawing.Point(0, 39);
+            this.btnAddMemberDeath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddMemberDeath.Name = "btnAddMemberDeath";
             this.btnAddMemberDeath.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddMemberDeath.Size = new System.Drawing.Size(250, 40);
+            this.btnAddMemberDeath.Size = new System.Drawing.Size(251, 39);
             this.btnAddMemberDeath.TabIndex = 20;
             this.btnAddMemberDeath.Text = "Ghi nhận kết thúc";
             this.btnAddMemberDeath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,9 +131,10 @@
             this.btnListMemberDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListMemberDeath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
             this.btnListMemberDeath.Location = new System.Drawing.Point(0, 0);
+            this.btnListMemberDeath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListMemberDeath.Name = "btnListMemberDeath";
             this.btnListMemberDeath.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnListMemberDeath.Size = new System.Drawing.Size(250, 40);
+            this.btnListMemberDeath.Size = new System.Drawing.Size(251, 39);
             this.btnListMemberDeath.TabIndex = 18;
             this.btnListMemberDeath.Text = "Danh sách kết thúc";
             this.btnListMemberDeath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,10 +148,11 @@
             this.btnMemberDeath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMemberDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberDeath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
-            this.btnMemberDeath.Location = new System.Drawing.Point(0, 293);
+            this.btnMemberDeath.Location = new System.Drawing.Point(0, 295);
+            this.btnMemberDeath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMemberDeath.Name = "btnMemberDeath";
-            this.btnMemberDeath.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMemberDeath.Size = new System.Drawing.Size(250, 45);
+            this.btnMemberDeath.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnMemberDeath.Size = new System.Drawing.Size(251, 46);
             this.btnMemberDeath.TabIndex = 13;
             this.btnMemberDeath.Text = "Kết thúc";
             this.btnMemberDeath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,10 +166,11 @@
             this.btnAddMemberAchivement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMemberAchivement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMemberAchivement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
-            this.btnAddMemberAchivement.Location = new System.Drawing.Point(0, 248);
+            this.btnAddMemberAchivement.Location = new System.Drawing.Point(0, 249);
+            this.btnAddMemberAchivement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddMemberAchivement.Name = "btnAddMemberAchivement";
-            this.btnAddMemberAchivement.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAddMemberAchivement.Size = new System.Drawing.Size(250, 45);
+            this.btnAddMemberAchivement.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnAddMemberAchivement.Size = new System.Drawing.Size(251, 46);
             this.btnAddMemberAchivement.TabIndex = 12;
             this.btnAddMemberAchivement.Text = "Ghi nhận thành tích";
             this.btnAddMemberAchivement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,9 +183,10 @@
             this.panelSubMember.Controls.Add(this.btnAddMember);
             this.panelSubMember.Controls.Add(this.btnListMembers);
             this.panelSubMember.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMember.Location = new System.Drawing.Point(0, 168);
+            this.panelSubMember.Location = new System.Drawing.Point(0, 169);
+            this.panelSubMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSubMember.Name = "panelSubMember";
-            this.panelSubMember.Size = new System.Drawing.Size(250, 80);
+            this.panelSubMember.Size = new System.Drawing.Size(251, 80);
             this.panelSubMember.TabIndex = 11;
             // 
             // btnAddMember
@@ -185,10 +197,11 @@
             this.btnAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
-            this.btnAddMember.Location = new System.Drawing.Point(0, 40);
+            this.btnAddMember.Location = new System.Drawing.Point(0, 39);
+            this.btnAddMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddMember.Name = "btnAddMember";
             this.btnAddMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAddMember.Size = new System.Drawing.Size(250, 40);
+            this.btnAddMember.Size = new System.Drawing.Size(251, 39);
             this.btnAddMember.TabIndex = 18;
             this.btnAddMember.Text = "Tiếp nhận thành viên";
             this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -204,9 +217,10 @@
             this.btnListMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
             this.btnListMembers.Location = new System.Drawing.Point(0, 0);
+            this.btnListMembers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListMembers.Name = "btnListMembers";
             this.btnListMembers.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnListMembers.Size = new System.Drawing.Size(250, 40);
+            this.btnListMembers.Size = new System.Drawing.Size(251, 39);
             this.btnListMembers.TabIndex = 17;
             this.btnListMembers.Text = "Danh sách thành viên";
             this.btnListMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,9 +235,10 @@
             this.btnMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
             this.btnMembers.Location = new System.Drawing.Point(0, 123);
+            this.btnMembers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMembers.Name = "btnMembers";
-            this.btnMembers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMembers.Size = new System.Drawing.Size(250, 45);
+            this.btnMembers.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnMembers.Size = new System.Drawing.Size(251, 46);
             this.btnMembers.TabIndex = 10;
             this.btnMembers.Text = "Thành viên";
             this.btnMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,14 +251,16 @@
             this.panel1.Controls.Add(this.tbSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 100);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 23);
+            this.panel1.Size = new System.Drawing.Size(251, 23);
             this.panel1.TabIndex = 9;
             // 
             // btnSearch
             // 
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSearch.Location = new System.Drawing.Point(175, 0);
+            this.btnSearch.Location = new System.Drawing.Point(176, 0);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 9;
@@ -255,26 +272,43 @@
             // 
             this.tbSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbSearch.Location = new System.Drawing.Point(0, 0);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(250, 22);
+            this.tbSearch.Size = new System.Drawing.Size(251, 22);
             this.tbSearch.TabIndex = 8;
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
             // panelLogo
             // 
+            this.panelLogo.BackColor = System.Drawing.Color.White;
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 100);
+            this.panelLogo.Size = new System.Drawing.Size(251, 100);
             this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(95)))), ((int)(((byte)(45)))));
+            this.panelChildForm.BackColor = System.Drawing.Color.White;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(251, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(782, 603);
+            this.panelChildForm.Size = new System.Drawing.Size(781, 603);
             this.panelChildForm.TabIndex = 1;
             // 
             // HomeScreen
@@ -284,6 +318,8 @@
             this.ClientSize = new System.Drawing.Size(1032, 603);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
             this.panelSideMenu.ResumeLayout(false);
@@ -291,6 +327,8 @@
             this.panelSubMember.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,5 +351,6 @@
         private System.Windows.Forms.Button btnAddMember;
         private System.Windows.Forms.Button btnListMembers;
         private System.Windows.Forms.Button btnAddMemberDeath;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

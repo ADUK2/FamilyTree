@@ -34,13 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
-      <HintPath>C:\Users\phand\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+      <HintPath>E:\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>C:\Users\phand\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
-    </Reference>
-    <Reference Include="Guna.UI">
-      <HintPath>C:\Users\phand\Downloads\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>E:\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -98,6 +95,18 @@
     </Compile>
     <Compile Include="UI\ListMembers.Designer.cs">
       <DependentUpon>ListMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PasswordUpdateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordUpdateDialog.Designer.cs">
+      <DependentUpon>PasswordUpdateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResetPasswordRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResetPasswordRequest.Designer.cs">
+      <DependentUpon>ResetPasswordRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SearchMembers.cs">
       <SubType>Form</SubType>
@@ -158,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ListMembers.resx">
       <DependentUpon>ListMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordUpdateDialog.resx">
+      <DependentUpon>PasswordUpdateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResetPasswordRequest.resx">
+      <DependentUpon>ResetPasswordRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SearchMembers.resx">
       <DependentUpon>SearchMembers.cs</DependentUpon>

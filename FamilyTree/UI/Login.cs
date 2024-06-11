@@ -25,7 +25,22 @@ namespace FamilyTree.UI
             this.Hide();
         }
 
-        private void bunifuThinButtonLogin_Click(object sender, EventArgs e)
+       
+
+        private void forgotpassword_Click(object sender, EventArgs e)
+        {
+            ResetPasswordRequest request = new ResetPasswordRequest();
+            request.ShowDialog();
+        }
+
+        
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = tbUsername.Text;
             string password = tbPassword.Text;
@@ -45,23 +60,6 @@ namespace FamilyTree.UI
             {
                 MessageBox.Show("Invalid username or password. Please try again.");
             }
-        }
-
-        private void forgotpassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void bunifuThinButtonLogin_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
