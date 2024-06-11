@@ -161,39 +161,3 @@ INSERT INTO Relationships (RelationshipType) VALUES
 (N'Con'),
 (N'Vợ/Chồng');
 
--- Thêm dữ liệu vào bảng Members
-INSERT INTO Members (FullName, Gender, BirthDate, Address, OccupationID, HometownID, isRoot, Generation) VALUES
-(N'Nguyễn Văn A', N'Nam', '1980-01-01', N'Số 1, Đường A, Quận B, Hà Nội', 1, 1, 1, 1),
-(N'Trần Thị B', N'Nữ', '1990-02-15', N'Số 2, Đường B, Quận C, Hải Phòng', 2, 2, 0, 2),
-(N'Lê Văn C', N'Nam', '1985-05-20', N'Số 3, Đường C, Quận D, Đà Nẵng', 3, 3, 0, 2),
-(N'Phạm Thị D', N'Nữ', '1992-07-30', N'Số 4, Đường D, Quận E, Hồ Chí Minh', 4, 4, 0, 2),
-(N'Hoàng Văn E', N'Nam', '1975-06-05', N'Số 5, Đường E, Quận F, Hà Nội', 5, 1, 1, 1),
-(N'Nguyễn Thị F', N'Nữ', '1983-09-12', N'Số 6, Đường F, Quận G, Hải Phòng', 6, 2, 0, 2),
-(N'Trần Văn G', N'Nam', '1988-12-25', N'Số 7, Đường G, Quận H, Đà Nẵng', 7, 3, 0, 2),
-(N'Lê Thị H', N'Nữ', '1995-11-14', N'Số 8, Đường H, Quận I, Hồ Chí Minh', 8, 4, 0, 2);
--- Thêm dữ liệu vào bảng MemberRelationships
-INSERT INTO MemberRelationships (MemberID1, MemberID2, RelationshipID, EventDate) VALUES
-(1, 2, 2, '01/06/2010'), -- Nguyễn Văn A và Trần Thị B kết hôn
-(3, 4, 2, '15/08/2015'), -- Lê Văn C và Phạm Thị D kết hôn
-(5, 6, 2, '20/12/2005'), -- Hoàng Văn E và Nguyễn Thị F kết hôn
-(7, 8, 2, '30/04/2020'), -- Trần Văn G và Lê Thị H kết hôn
-(1, 3, 1, '01/06/2005'), -- Nguyễn Văn A là con của Lê Văn C
-(5, 7, 1, '01/06/2010'); -- Hoàng Văn E là con của Trần Văn G
-
--- Thêm dữ liệu vào bảng MemberDeaths
-INSERT INTO MemberDeaths (MemberID, DeathDate, CauseID, BurialPlaceID) VALUES
-(1, '01/01/2070', 8, 1), -- Nguyễn Văn A tử vong do tuổi già và được chôn cất tại Nghĩa trang Bình Hưng Hòa
-(2, '15/03/2060', 6, 2), -- Trần Thị B tử vong do bệnh tim mạch và được chôn cất tại Nghĩa trang Bà Chiểu
-(3, '20/05/2065', 3, 3), -- Lê Văn C tử vong do bệnh ung thư và được chôn cất tại Nghĩa trang Láng Hạ
-(4, '30/07/2055', 10, 1); -- Phạm Thị D tử vong do bệnh đau tim và được chôn cất tại Nghĩa trang Bình Hưng Hòa
-
--- Thêm dữ liệu vào bảng MemberAchievements
-INSERT INTO MemberAchievements (MemberID, AchievementID, AchievementDate) VALUES
-(1, 5, '15/05/2005'), -- Nguyễn Văn A đạt học vị tiến sĩ vào năm 2005
-(2, 7, '20/10/2012'), -- Trần Thị B sáng tác tác phẩm nghệ thuật nổi tiếng vào năm 2012
-(3, 1, '10/12/2015'), -- Lê Văn C giành giải Nobel vào năm 2015
-(4, 4, '25/02/2018'), -- Phạm Thị D giành giải Grammy vào năm 2018
-(5, 9, '01/01/2020'), -- Hoàng Văn E thành lập doanh nghiệp thành công vào năm 2020
-(6, 3, '05/06/2021'); -- Nguyễn Thị F giành giải Oscar vào năm 2021
-
-
