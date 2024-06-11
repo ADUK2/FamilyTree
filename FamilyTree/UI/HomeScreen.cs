@@ -22,6 +22,7 @@ namespace FamilyTree.UI
         private void customizeDesing()
         {
             panelSubMember.Visible = false;
+            panelSubMemberDeaths.Visible = false;
         }
 
         private void hideSubMenu()
@@ -29,6 +30,10 @@ namespace FamilyTree.UI
             if (panelSubMember.Visible)
             {
                 panelSubMember.Visible = false;
+            }
+            if (panelSubMemberDeaths.Visible)
+            {
+                panelSubMemberDeaths.Visible = false;
             }
         }
         private void showSubMenu(Panel subMenu)
@@ -47,7 +52,6 @@ namespace FamilyTree.UI
         private void btnMembers_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSubMember);
-            //
         }
 
         private void btnListMembers_Click(object sender, EventArgs e)
@@ -62,22 +66,7 @@ namespace FamilyTree.UI
             hideSubMenu();
         }
 
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
-        {
-            if(activeForm != null)
-            {
-                activeForm.Close();
-            }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            panelChildForm.BringToFront();
-            childForm.Show();
-        }
+        
 
         private void btnAddMemberAchivement_Click(object sender, EventArgs e)
         {
@@ -95,6 +84,28 @@ namespace FamilyTree.UI
         {
             openChildForm(new FormYearlyReport());
             hideSubMenu();
+        }
+
+        private void btnMemberDeath_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubMemberDeaths);
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            panelChildForm.BringToFront();
+            childForm.Show();
         }
     }
 }
