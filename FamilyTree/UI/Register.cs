@@ -12,6 +12,7 @@ using System.Data.Sql;
 using FamilyTree.UI;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Reflection.Emit;
 
 namespace FamilyTree
 {
@@ -24,7 +25,6 @@ namespace FamilyTree
         public Register()
         {
             InitializeComponent();
-            bunifuTextBoxPassword.TextChanged += bunifuTextBoxPassword_TextChange;
         }
 
         private void btn_Register_Click(object sender, EventArgs e)
@@ -37,7 +37,6 @@ namespace FamilyTree
 
             cnn.Parameters.AddWithValue("@UserName", (bunifuTextBoxUsername.Text));
             cnn.Parameters.AddWithValue("@PasswordHash", (bunifuTextBoxPassword.Text));
-            cnn.Parameters.AddWithValue("@FullName", (bunifuTextBoxFullName.Text));
             cnn.Parameters.AddWithValue("@Email", (bunifuTextBoxEmail.Text));
 
             cnn.ExecuteNonQuery();
@@ -60,7 +59,7 @@ namespace FamilyTree
         {
             string username = bunifuTextBoxUsername.Text;
             string password = bunifuTextBoxPassword.Text;
-            string fullname = bunifuTextBoxFullName.Text;
+            string confirmpassword = bunifuTextBoxConfirmPassword.Text;
             string email = bunifuTextBoxEmail.Text;
 
             Account account = new Account();
@@ -147,6 +146,58 @@ namespace FamilyTree
             // Biểu thức chính quy để kiểm tra định dạng email
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
+        }
+
+        private void bunifuTextBoxUsername_TextChange(object sender, EventArgs e)
+        {
+            string username = bunifuTextBoxUsername.Text;
+            bool isValid = ValidateUsername(username);
+
+            // Cập nhật label cảnh báo
+            lbUsername.Text = isValid ? "Tên người dùng hợp lệ" : "Tên người dùng không hợp lệ";
+            lbUsername.ForeColor = isValid ? System.Drawing.Color.Green : System.Drawing.Color.Red;
+        }
+
+        private bool ValidateUsername(string username)
+        {
+            // Kiểm tra độ dài tối thiểu và tối đa
+            if (username.Length < 6 || username.Length > 15)
+            {
+                return false;
+            }
+
+            // Kiểm tra xem username có chứa ký tự đặc biệt hay không
+            if (username.Any(c => !char.IsLetterOrDigit(c) && !char.IsWhiteSpace(c)))
+            {
+                return false;
+            }
+
+            // Kiểm tra xem username có chứa khoảng trắng ở đầu hoặc cuối hay không
+            if (username.StartsWith(" ") || username.EndsWith(" "))
+            {
+                return false;
+            }
+
+            // Nếu tất cả các điều kiện trên được đáp ứng thì username hợp lệ
+            return true;
+        }
+
+        private void bunifuTextBoxConfirmPassword_TextChange(object sender, EventArgs e)
+        {
+            // Kiểm tra mật khẩu xác nhận khi người dùng nhập vào
+            string password = bunifuTextBoxPassword.Text;
+            string confirmPassword = bunifuTextBoxConfirmPassword.Text;
+            bool isConfirmed = ConfirmPassword(password, confirmPassword);
+
+            // Cập nhật label cảnh báo
+            lbConfirmPassword.Text = isConfirmed ? "Xác nhận mật khẩu thành công" : "Xác nhận mật khẩu không thành công";
+            lbConfirmPassword.ForeColor = isConfirmed ? System.Drawing.Color.Green : System.Drawing.Color.Red;
+        }
+
+        private bool ConfirmPassword(string password, string confirmPassword)
+        {
+            // Kiểm tra xem hai mật khẩu có giống nhau hay không
+            return password == confirmPassword;
         }
     }
 }

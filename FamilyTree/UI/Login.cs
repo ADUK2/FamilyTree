@@ -16,10 +16,6 @@ namespace FamilyTree.UI
         public Login()
         {
             InitializeComponent();
-<<<<<<< HEAD
-            tbPassword.TextChanged += bunifuTextBoxPassword_TextChange;
-=======
->>>>>>> 0a9e27d (Logic, UI Register Form)
         }
 
         private void lbRegister_Click(object sender, EventArgs e)
@@ -56,59 +52,7 @@ namespace FamilyTree.UI
 
         }
 
-<<<<<<< HEAD
-        private void bunifuTextBoxPassword_TextChange(object sender, EventArgs e)
-        {
-            string password = tbPassword.Text;
-            bool isStrong = CheckPasswordStrength(password);
-
-            if (isStrong)
-            {
-                lbResult.Text = "Mật khẩu đủ mạnh!";
-                lbResult.ForeColor = System.Drawing.Color.Green;
-            }
-            else
-            {
-                lbResult.Text = "Mật khẩu không đủ mạnh!";
-                lbResult.ForeColor = System.Drawing.Color.Red;
-            }
-        }
-
-        private bool CheckPasswordStrength(string password)
-        {
-            // Kiểm tra độ dài mật khẩu
-            if (password.Length < 8)
-            {
-                return false;
-            }
-
-            // Kiểm tra ít nhất 1 chữ cái thường
-            if (!password.Any(char.IsLower))
-            {
-                return false;
-            }
-
-            // Kiểm tra ít nhất 1 chữ cái hoa
-            if (!password.Any(char.IsUpper))
-            {
-                return false;
-            }
-
-            // Kiểm tra ít nhất 1 chữ số
-            if (!password.Any(char.IsDigit))
-            {
-                return false;
-            }
-
-            // Kiểm tra ít nhất 1 ký tự đặc biệt
-            if (!Regex.IsMatch(password, @"[!@#$%^&*()_+\-=\[\]{};':""\\|,.<>\/?]"))
-            {
-                return false;
-            }
-
-            // Mật khẩu đủ mạnh
-            return true;
-        }
+        
 
         private void bunifuThinButtonLogin_Click_1(object sender, EventArgs e)
         {
@@ -119,8 +63,5 @@ namespace FamilyTree.UI
         {
             this.Close();
         }
-=======
-        
->>>>>>> 0a9e27d (Logic, UI Register Form)
     }
 }
