@@ -16,7 +16,10 @@ namespace FamilyTree.UI
         public Login()
         {
             InitializeComponent();
+<<<<<<< HEAD
             tbPassword.TextChanged += bunifuTextBoxPassword_TextChange;
+=======
+>>>>>>> 0a9e27d (Logic, UI Register Form)
         }
 
         private void lbRegister_Click(object sender, EventArgs e)
@@ -61,6 +64,7 @@ namespace FamilyTree.UI
 
         }
 
+<<<<<<< HEAD
         private void bunifuTextBoxPassword_TextChange(object sender, EventArgs e)
         {
             string password = tbPassword.Text;
@@ -123,5 +127,8 @@ namespace FamilyTree.UI
         {
             this.Close();
         }
+=======
+        
+>>>>>>> 0a9e27d (Logic, UI Register Form)
     }
 }
