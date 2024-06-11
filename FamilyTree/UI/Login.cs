@@ -39,16 +39,8 @@ namespace FamilyTree.UI
                 MessageBox.Show("Login successful!");
                 // Mở form chính hoặc thực hiện các hành động khác sau khi đăng nhập thành công
                 this.Hide();
-                /*FirstTimeLogin firstTimeLogin = new FirstTimeLogin();
-                firstTimeLogin.Show();*/
-                /*Achievements achievements = new Achievements();
-                achievements.Show();*/
-                /*EndAcknowledgment endAcknowledgment = new EndAcknowledgment();
-                endAcknowledgment.Show();*/
-                /*FormYearlyReport formYearlyReport = new FormYearlyReport();
-                formYearlyReport.Show();*/
-                MemberListForm form = new MemberListForm();
-                form.Show();
+                HomeScreen homeScreen = new HomeScreen();
+                homeScreen.Show();
             }
             else
             {

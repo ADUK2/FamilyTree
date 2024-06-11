@@ -2,17 +2,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FamilyTree.Classes
 {
     public class Member
     {
-        private string connectionString = "Data Source=WIN-124DGHNTBQA;Initial Catalog=FamilyTreeDB;Integrated Security=True";
+        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
 
         public int MemberID { get; set; }
         public string Name { get; set; }
@@ -96,22 +98,96 @@ namespace FamilyTree.Classes
             return member;
         }
 
-        public void UpdateMember(Member member)
+        public Tuple<int, int> LoadMemberDeaths(int memberDeathID)
         {
+            string query = @"
+                SELECT 
+                    CauseID,
+                    BurialPlaceID
+                FROM 
+                    MemberDeaths
+                WHERE
+                    MemberDeathID = @MemberDeathID
+            ";
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Members SET FullName = @FullName, Gender = @Gender, BirthDate = @BirthDate, Address = @Address, OccupationID = @OccupationID, HometownID = @HometownID WHERE MemberID = @MemberID";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@FullName", member.Name);
-                command.Parameters.AddWithValue("@Gender", member.Gender);
-                command.Parameters.AddWithValue("@BirthDate", member.BirthDate);
-                command.Parameters.AddWithValue("@Address", member.Address);
-                command.Parameters.AddWithValue("@OccupationID", member.OccupationID);
-                command.Parameters.AddWithValue("@HometownID", member.HometownID);
-                command.Parameters.AddWithValue("@MemberID", member.MemberID);
-                connection.Open();
-                command.ExecuteNonQuery();
+                command.Parameters.AddWithValue("@MemberDeathID", memberDeathID);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        int causeID = reader.GetInt32(0);
+                        int burialPlaceID = reader.GetInt32(1);
+                        reader.Close();
+
+                        // Trả về Tuple chứa CauseID và BurialPlaceID
+                        return Tuple.Create(causeID, burialPlaceID);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No data found for the given MemberDeathID.", "Error");
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
             }
+
+            // Trả về giá trị mặc định nếu có lỗi
+            return Tuple.Create(-1, -1);
+        }
+
+        public bool UpdateMember(Member member)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE Members SET FullName = @FullName, Gender = @Gender, BirthDate = @BirthDate, Address = @Address, OccupationID = @OccupationID, HometownID = @HometownID WHERE MemberID = @MemberID";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@FullName", member.Name);
+                    command.Parameters.AddWithValue("@Gender", member.Gender);
+                    command.Parameters.AddWithValue("@BirthDate", member.BirthDate);
+                    command.Parameters.AddWithValue("@Address", member.Address);
+                    command.Parameters.AddWithValue("@OccupationID", member.OccupationID);
+                    command.Parameters.AddWithValue("@HometownID", member.HometownID);
+                    command.Parameters.AddWithValue("@MemberID", member.MemberID);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                return true;
+
+            }
+            catch { return false; }
+            
+        }
+
+        public bool UpdateMemberDeath(int memberDeathID, int causeID,int placeID)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE MemberDeaths SET CauseID = @CauseID, BurialPlaceID = @BurialPlaceID WHERE MemberDeathID = @MemberDeathID";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@MemberDeathID", memberDeathID);
+                    command.Parameters.AddWithValue("@CauseID", causeID);
+                    command.Parameters.AddWithValue("@BurialPlaceID", placeID);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch { return false; }            
+
         }
 
         public void DeleteMember(int id)
@@ -237,47 +313,7 @@ namespace FamilyTree.Classes
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    /*// Kiểm tra xem memberID có tồn tại không
-                    string checkMemberQuery = "SELECT COUNT(*) FROM Members WHERE ID = @MemberID";
-                    SqlCommand checkMemberCommand = new SqlCommand(checkMemberQuery, connection);
-                    checkMemberCommand.Parameters.AddWithValue("@MemberID", memberID);
-                    int memberCount = (int)checkMemberCommand.ExecuteScalar();
-                    if (memberCount == 0)
-                    {
-                        throw new Exception("Member ID does not exist.");
-                    }
-
-                    // Kiểm tra xem CauseID có hợp lệ không
-                    string checkCauseQuery = "SELECT COUNT(*) FROM Causes WHERE ID = @CauseID";
-                    SqlCommand checkCauseCommand = new SqlCommand(checkCauseQuery, connection);
-                    checkCauseCommand.Parameters.AddWithValue("@CauseID", causeID);
-                    int causeCount = (int)checkCauseCommand.ExecuteScalar();
-                    if (causeCount == 0)
-                    {
-                        throw new Exception("Cause ID is not valid.");
-                    }
-
-                    // Kiểm tra xem BurialPlaceID có hợp lệ không
-                    string checkBurialPlaceQuery = "SELECT COUNT(*) FROM BurialPlaces WHERE ID = @BurialPlaceID";
-                    SqlCommand checkBurialPlaceCommand = new SqlCommand(checkBurialPlaceQuery, connection);
-                    checkBurialPlaceCommand.Parameters.AddWithValue("@BurialPlaceID", burialPlaceID);
-                    int burialPlaceCount = (int)checkBurialPlaceCommand.ExecuteScalar();
-                    if (burialPlaceCount == 0)
-                    {
-                        throw new Exception("Burial Place ID is not valid.");
-                    }
-
-                    // Kiểm tra xem DeathDate có sau ngày sinh không
-                    string checkBirthDateQuery = "SELECT DateOfBirth FROM Members WHERE ID = @MemberID";
-                    SqlCommand checkBirthDateCommand = new SqlCommand(checkBirthDateQuery, connection);
-                    checkBirthDateCommand.Parameters.AddWithValue("@MemberID", memberID);
-                    DateTime birthDate = (DateTime)checkBirthDateCommand.ExecuteScalar();
-                    if (deathDate <= birthDate)
-                    {
-                        throw new Exception("Death date must be after the birth date.");
-                    }*/
-
+                    
                     // Chèn thông tin về cái chết của thành viên
                     string query = "INSERT INTO MemberDeaths (MemberID, DeathDate, CauseID, BurialPlaceID) VALUES (@MemberID, @DeathDate, @CauseID, @BurialPlaceID)";
                     SqlCommand command = new SqlCommand(query, connection);

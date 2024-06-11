@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -44,7 +45,7 @@ namespace FamilyTree.UI
         private bool CheckExistingMembers()
         {
             // Chuỗi kết nối tới cơ sở dữ liệu
-            string connectionString = "Data Source=WIN-124DGHNTBQA;Initial Catalog=FamilyTreeDB;Integrated Security=True";
+             string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
 
             // Câu lệnh SQL để đếm số lượng thành viên
             string query = "SELECT COUNT(*) FROM Members";

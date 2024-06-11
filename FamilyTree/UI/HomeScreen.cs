@@ -92,7 +92,7 @@ namespace FamilyTree.UI
         }
 
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null)
             {
@@ -106,6 +106,24 @@ namespace FamilyTree.UI
             panelChildForm.Tag = childForm;
             panelChildForm.BringToFront();
             childForm.Show();
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchName = tbSearch.Text;
+            openChildForm(new SearchMembers(searchName));
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchName = tbSearch.Text;
+            openChildForm(new SearchMembers(searchName));
+        }
+
+        private void btnListMemberDeath_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ListMemberDeaths());
+            hideSubMenu();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -11,22 +12,21 @@ using System.Windows.Forms;
 
 namespace FamilyTree.UI
 {
-    public partial class MemberListForm : Form
+    public partial class SearchMembers : Form
     {
-        private string connectionString = "Data Source=WIN-124DGHNTBQA;Initial Catalog=FamilyTreeDB;Integrated Security=True";
-
-        private TextBox textBoxSearch;
-        private Button buttonSearch;
+        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         private DataGridView dataGridViewMembers;
         private DataGridViewTextBoxColumn ColumnSTT;
         private DataGridViewTextBoxColumn ColumnFullName;
         private DataGridViewTextBoxColumn ColumnBirthDate;
         private DataGridViewTextBoxColumn ColumnGeneration;
         private DataGridViewTextBoxColumn ColumnParent;
-        public MemberListForm()
+        private string searchName;
+        public SearchMembers(string searchName1)
         {
+            this.searchName = searchName1;
             InitializeComponent();
-            LoadMembers();
+            LoadMembers(searchName);
         }
         private void LoadMembers(string searchName = "")
         {
@@ -57,10 +57,6 @@ namespace FamilyTree.UI
                 }
             }
         }
-
-        private void ButtonSearch_Click(object sender, EventArgs e)
-        {
-            LoadMembers(textBoxSearch.Text);
-        }
+       
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,7 +14,7 @@ namespace FamilyTree.UI
 {
     public partial class FormYearlyReport : Form
     {
-        private string connectionString = "Data Source=WIN-124DGHNTBQA;Initial Catalog=FamilyTreeDB;Integrated Security=True";
+        private string connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         public FormYearlyReport()
         {
             InitializeComponent();
@@ -23,7 +24,15 @@ namespace FamilyTree.UI
         {
             int fromYear = dtpFromYear.Value.Year;
             int toYear = dtpToYear.Value.Year;
-            string reportType = cmbReportType.SelectedItem.ToString();
+
+            string reportType = cmbReportType.SelectedItem?.ToString();
+
+            // Kiểm tra xem đã chọn loại báo cáo hay chưa
+            if (string.IsNullOrEmpty(reportType))
+            {
+                MessageBox.Show("Vui lòng chọn loại báo cáo.");
+                return;
+            }
 
             if (fromYear > toYear)
             {

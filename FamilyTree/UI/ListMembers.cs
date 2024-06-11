@@ -49,17 +49,24 @@ namespace FamilyTree.UI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+               
             if (dataGridView1.SelectedRows.Count > 0)
             {
+                if (dataGridView1.SelectedRows.Count > 1)
+                {
+                    MessageBox.Show("Chỉ được chọn 1 thành viên!!!");
+                    return;
+                }
                 int memberId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["MemberID"].Value);
                 EditMember formEditMember = new EditMember(memberId);
-                formEditMember.ShowDialog();
+                formEditMember.StartPosition = FormStartPosition.CenterParent;
+                formEditMember.ShowDialog(this);
             }
             else
             {
-                MessageBox.Show("Please select a member to edit.");
+                MessageBox.Show("Hãy chọn thành viên bạn muốn chỉnh sửa.");
             }
-        }
+        }        
 
     }
 }

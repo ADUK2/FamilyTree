@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
@@ -74,11 +75,23 @@
     <Compile Include="UI\EditMember.Designer.cs">
       <DependentUpon>EditMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\EditMemberDeath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EditMemberDeath.Designer.cs">
+      <DependentUpon>EditMemberDeath.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormYearlyReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FormYearlyReport.Designer.cs">
       <DependentUpon>FormYearlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ListMemberDeaths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ListMemberDeaths.Designer.cs">
+      <DependentUpon>ListMemberDeaths.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ListMembers.cs">
       <SubType>Form</SubType>
@@ -86,11 +99,11 @@
     <Compile Include="UI\ListMembers.Designer.cs">
       <DependentUpon>ListMembers.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\MemberListForm.cs">
+    <Compile Include="UI\SearchMembers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MemberListForm.Designer.cs">
-      <DependentUpon>MemberListForm.cs</DependentUpon>
+    <Compile Include="UI\SearchMembers.Designer.cs">
+      <DependentUpon>SearchMembers.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Register.cs">
       <SubType>Form</SubType>
@@ -131,17 +144,23 @@
     <EmbeddedResource Include="UI\EditMember.resx">
       <DependentUpon>EditMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\EditMemberDeath.resx">
+      <DependentUpon>EditMemberDeath.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormYearlyReport.resx">
       <DependentUpon>FormYearlyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ListMemberDeaths.resx">
+      <DependentUpon>ListMemberDeaths.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ListMembers.resx">
       <DependentUpon>ListMembers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\MemberListForm.resx">
-      <DependentUpon>MemberListForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\SearchMembers.resx">
+      <DependentUpon>SearchMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>

@@ -2,7 +2,7 @@
 
 namespace FamilyTree.UI
 {
-    partial class MemberListForm
+    partial class SearchMembers
     {
         /// <summary>
         /// Required designer variable.
@@ -30,33 +30,15 @@ namespace FamilyTree.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.buttonSearch = new System.Windows.Forms.Button();
             this.dataGridViewMembers = new System.Windows.Forms.DataGridView();
             this.ColumnSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnGeneration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnParent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(12, 12);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(250, 22);
-            this.textBoxSearch.TabIndex = 0;
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Location = new System.Drawing.Point(268, 10);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 1;
-            this.buttonSearch.Text = "Search";
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // dataGridViewMembers
             // 
@@ -67,10 +49,10 @@ namespace FamilyTree.UI
             this.ColumnBirthDate,
             this.ColumnGeneration,
             this.ColumnParent});
-            this.dataGridViewMembers.Location = new System.Drawing.Point(68, 50);
+            this.dataGridViewMembers.Location = new System.Drawing.Point(12, 76);
             this.dataGridViewMembers.Name = "dataGridViewMembers";
             this.dataGridViewMembers.RowHeadersWidth = 51;
-            this.dataGridViewMembers.Size = new System.Drawing.Size(679, 297);
+            this.dataGridViewMembers.Size = new System.Drawing.Size(562, 400);
             this.dataGridViewMembers.TabIndex = 2;
             // 
             // ColumnSTT
@@ -79,7 +61,7 @@ namespace FamilyTree.UI
             this.ColumnSTT.MinimumWidth = 6;
             this.ColumnSTT.Name = "ColumnSTT";
             this.ColumnSTT.ReadOnly = true;
-            this.ColumnSTT.Width = 125;
+            this.ColumnSTT.Width = 45;
             // 
             // ColumnFullName
             // 
@@ -103,7 +85,7 @@ namespace FamilyTree.UI
             this.ColumnGeneration.MinimumWidth = 6;
             this.ColumnGeneration.Name = "ColumnGeneration";
             this.ColumnGeneration.ReadOnly = true;
-            this.ColumnGeneration.Width = 125;
+            this.ColumnGeneration.Width = 45;
             // 
             // ColumnParent
             // 
@@ -111,21 +93,32 @@ namespace FamilyTree.UI
             this.ColumnParent.MinimumWidth = 6;
             this.ColumnParent.Name = "ColumnParent";
             this.ColumnParent.ReadOnly = true;
-            this.ColumnParent.Width = 125;
+            this.ColumnParent.Width = 170;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(196, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Thông tin thành viên";
             // 
             // MemberListForm
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(596, 539);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewMembers);
-            this.Controls.Add(this.buttonSearch);
-            this.Controls.Add(this.textBoxSearch);
             this.Name = "MemberListForm";
             this.Text = "Danh Sách Thành Viên";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }        
+        }
+
         #endregion
+        private Label label2;
     }
 }

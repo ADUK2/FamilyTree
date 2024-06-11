@@ -69,3 +69,6 @@ D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.
 D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\Bunifu.Licensing.dll
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe.licenses
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.ListMemberDeaths.resources
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.EditMemberDeath.resources
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.SearchMembers.resources

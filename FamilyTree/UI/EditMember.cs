@@ -78,7 +78,15 @@ namespace FamilyTree.UI
             int OccupationID = selectedOccupation.Value;
             member.HometownID = hometownID;
             member.OccupationID = OccupationID;
-            member.UpdateMember(member);
+            bool result = member.UpdateMember(member);
+            if (result)
+            {
+                MessageBox.Show("Cật nhật thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cật nhật thất bại");
+            }
             this.Close();
         }
 

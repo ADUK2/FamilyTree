@@ -83,6 +83,7 @@
             this.btnYearlyReport.Text = "Báo cáo năm";
             this.btnYearlyReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnYearlyReport.UseVisualStyleBackColor = true;
+            this.btnYearlyReport.Click += new System.EventHandler(this.btnYearlyReport_Click);
             // 
             // panelSubMemberDeaths
             // 
@@ -101,7 +102,7 @@
             this.btnAddMemberDeath.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddMemberDeath.FlatAppearance.BorderSize = 0;
             this.btnAddMemberDeath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddMemberDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMemberDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMemberDeath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
             this.btnAddMemberDeath.Location = new System.Drawing.Point(0, 40);
             this.btnAddMemberDeath.Name = "btnAddMemberDeath";
@@ -111,6 +112,7 @@
             this.btnAddMemberDeath.Text = "Ghi nhận kết thúc";
             this.btnAddMemberDeath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMemberDeath.UseVisualStyleBackColor = false;
+            this.btnAddMemberDeath.Click += new System.EventHandler(this.btnAddMemberDeath_Click);
             // 
             // btnListMemberDeath
             // 
@@ -118,7 +120,7 @@
             this.btnListMemberDeath.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListMemberDeath.FlatAppearance.BorderSize = 0;
             this.btnListMemberDeath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListMemberDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListMemberDeath.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListMemberDeath.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
             this.btnListMemberDeath.Location = new System.Drawing.Point(0, 0);
             this.btnListMemberDeath.Name = "btnListMemberDeath";
@@ -128,6 +130,7 @@
             this.btnListMemberDeath.Text = "Danh sách kết thúc";
             this.btnListMemberDeath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListMemberDeath.UseVisualStyleBackColor = false;
+            this.btnListMemberDeath.Click += new System.EventHandler(this.btnListMemberDeath_Click);
             // 
             // btnMemberDeath
             // 
@@ -161,6 +164,7 @@
             this.btnAddMemberAchivement.Text = "Ghi nhận thành tích";
             this.btnAddMemberAchivement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMemberAchivement.UseVisualStyleBackColor = true;
+            this.btnAddMemberAchivement.Click += new System.EventHandler(this.btnAddMemberAchivement_Click);
             // 
             // panelSubMember
             // 
@@ -179,7 +183,7 @@
             this.btnAddMember.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddMember.FlatAppearance.BorderSize = 0;
             this.btnAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
             this.btnAddMember.Location = new System.Drawing.Point(0, 40);
             this.btnAddMember.Name = "btnAddMember";
@@ -189,6 +193,7 @@
             this.btnAddMember.Text = "Tiếp nhận thành viên";
             this.btnAddMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddMember.UseVisualStyleBackColor = false;
+            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // btnListMembers
             // 
@@ -196,7 +201,7 @@
             this.btnListMembers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListMembers.FlatAppearance.BorderSize = 0;
             this.btnListMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
             this.btnListMembers.Location = new System.Drawing.Point(0, 0);
             this.btnListMembers.Name = "btnListMembers";
@@ -206,6 +211,7 @@
             this.btnListMembers.Text = "Danh sách thành viên";
             this.btnListMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListMembers.UseVisualStyleBackColor = false;
+            this.btnListMembers.Click += new System.EventHandler(this.btnListMembers_Click);
             // 
             // btnMembers
             // 
@@ -222,6 +228,7 @@
             this.btnMembers.Text = "Thành viên";
             this.btnMembers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMembers.UseVisualStyleBackColor = true;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // panel1
             // 
@@ -242,6 +249,7 @@
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tbSearch
             // 
@@ -250,6 +258,7 @@
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(250, 22);
             this.tbSearch.TabIndex = 8;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
             // panelLogo
             // 
