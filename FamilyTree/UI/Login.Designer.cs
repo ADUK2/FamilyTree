@@ -86,7 +86,7 @@
             this.lbRegister.AutoSize = true;
             this.lbRegister.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegister.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbRegister.Location = new System.Drawing.Point(507, 462);
+            this.lbRegister.Location = new System.Drawing.Point(463, 463);
             this.lbRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRegister.Name = "lbRegister";
             this.lbRegister.Size = new System.Drawing.Size(362, 24);
@@ -159,7 +159,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbUsername.OnIdleState = stateProperties4;
-            this.tbUsername.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbUsername.Padding = new System.Windows.Forms.Padding(3);
             this.tbUsername.PasswordChar = '\0';
             this.tbUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbUsername.PlaceholderText = "Enter Username";
@@ -233,7 +233,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.tbPassword.OnIdleState = stateProperties8;
-            this.tbPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbPassword.Padding = new System.Windows.Forms.Padding(3);
             this.tbPassword.PasswordChar = '*';
             this.tbPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.tbPassword.PlaceholderText = "Enter text";
@@ -299,7 +299,7 @@
             this.pbClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbClose.BackgroundImage")));
             this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbClose.Location = new System.Drawing.Point(850, 11);
-            this.pbClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(2);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(19, 20);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,17 +51,17 @@
             "Báo cáo thành tích các thành viên"});
             this.cmbReportType.Location = new System.Drawing.Point(12, 69);
             this.cmbReportType.Name = "cmbReportType";
-            this.cmbReportType.Size = new System.Drawing.Size(315, 28);
+            this.cmbReportType.Size = new System.Drawing.Size(315, 24);
             this.cmbReportType.TabIndex = 0;
             // 
             // dtpFromYear
             // 
             this.dtpFromYear.CustomFormat = "yyyy";
             this.dtpFromYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFromYear.Location = new System.Drawing.Point(41, 99);
+            this.dtpFromYear.Location = new System.Drawing.Point(46, 99);
             this.dtpFromYear.Name = "dtpFromYear";
             this.dtpFromYear.ShowUpDown = true;
-            this.dtpFromYear.Size = new System.Drawing.Size(120, 22);
+            this.dtpFromYear.Size = new System.Drawing.Size(120, 20);
             this.dtpFromYear.TabIndex = 1;
             // 
             // dtpToYear
@@ -70,7 +71,7 @@
             this.dtpToYear.Location = new System.Drawing.Point(207, 100);
             this.dtpToYear.Name = "dtpToYear";
             this.dtpToYear.ShowUpDown = true;
-            this.dtpToYear.Size = new System.Drawing.Size(120, 22);
+            this.dtpToYear.Size = new System.Drawing.Size(120, 20);
             this.dtpToYear.TabIndex = 2;
             // 
             // dgvReport
@@ -112,35 +113,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Display", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 9);
+            this.label1.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(164, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 49);
+            this.label1.Size = new System.Drawing.Size(180, 35);
             this.label1.TabIndex = 8;
-            this.label1.Text = "BÁO CÁO NĂM";
+            this.label1.Text = "Báo Cáo Năm";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 105);
+            this.label2.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 16);
+            this.label2.Size = new System.Drawing.Size(32, 19);
             this.label2.TabIndex = 9;
             this.label2.Text = "Từ:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(167, 105);
+            this.label3.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(166, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
+            this.label3.Size = new System.Drawing.Size(39, 19);
             this.label3.TabIndex = 10;
             this.label3.Text = "Đến:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 19);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Chọn loại báo cáo:";
             // 
             // FormYearlyReport
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(582, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -168,5 +183,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

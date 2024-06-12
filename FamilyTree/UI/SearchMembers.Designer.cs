@@ -98,10 +98,11 @@ namespace FamilyTree.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Location = new System.Drawing.Point(196, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 24);
+            this.label2.Size = new System.Drawing.Size(283, 35);
             this.label2.TabIndex = 4;
             this.label2.Text = "Thông tin thành viên";
             // 
