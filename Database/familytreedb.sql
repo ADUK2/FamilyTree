@@ -93,3 +93,69 @@ CREATE TABLE Users (
     VerificationCode NVARCHAR(10),
     VerificationExpiry DATETIME
 );
+
+--INSERT DATA
+-- Thêm dữ liệu cho bảng Hometowns
+INSERT INTO Hometowns (HometownName) VALUES
+(N'Hà Nội'),
+(N'Hải Phòng'),
+(N'Đà Nẵng'),
+(N'Hồ Chí Minh');
+
+-- Thêm dữ liệu cho bảng Occupations
+INSERT INTO Occupations (OccupationName) VALUES
+(N'Lập trình viên'),
+(N'Kỹ sư xây dựng'),
+(N'Giáo viên'),
+(N'Y tá'),
+(N'Nhân viên văn phòng'),
+(N'Bác sĩ'),
+(N'Kế toán viên'),
+(N'Nhà nghiên cứu'),
+(N'Nhà kinh doanh'),
+(N'Diễn viên'),
+(N'Nhà văn'),
+(N'Nghệ sĩ'),
+(N'Luật sư'),
+(N'Nhà hàng xóm'),
+(N'Thợ cơ khí');
+
+-- Thêm dữ liệu cho bảng Achievements
+INSERT INTO Achievements (AchievementName) VALUES
+(N'Giải Nobel'),
+(N'Huy chương vàng Olympic'),
+(N'Giải thưởng Oscar'),
+(N'Giải thưởng Grammy'),
+(N'Đạt học vị tiến sĩ'),
+(N'Có công trình nghiên cứu được công nhận quốc tế'),
+(N'Sáng tác tác phẩm nghệ thuật nổi tiếng'),
+(N'Xuất bản sách bán chạy'),
+(N'Thành lập doanh nghiệp thành công'),
+(N'Thành tựu trong lĩnh vực từ thiện');
+
+-- Thêm dữ liệu cho bảng DeathCauses
+INSERT INTO DeathCauses (CauseName) VALUES
+(N'Tai nạn giao thông'),
+(N'Tai nạn lao động'),
+(N'Bệnh ung thư'),
+(N'Tai nạn đuối nước'),
+(N'Đột quỵ'),
+(N'Bệnh tim mạch'),
+(N'Covid-19'),
+(N'Tử vong do tuổi già'),
+(N'Tai nạn rơi từ độ cao'),
+(N'Bệnh đau tim'),
+(N'Tai nạn đuối trong bể bơi'),
+(N'Bệnh đường hô hấp');
+
+-- Thêm dữ liệu cho bảng BurialPlaces
+INSERT INTO BurialPlaces (PlaceName) VALUES
+(N'Nghĩa trang Bình Hưng Hòa'),
+(N'Nghĩa trang Bà Chiểu'),
+(N'Nghĩa trang Láng Hạ');
+
+-- Thêm dữ liệu cho bảng Relationships
+INSERT INTO Relationships (RelationshipType) VALUES
+(N'Con'),
+(N'Vợ/Chồng');
+

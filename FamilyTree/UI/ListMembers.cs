@@ -65,5 +65,44 @@ namespace FamilyTree.UI
                 MessageBox.Show("Hãy chọn thành viên bạn muốn chỉnh sửa.");
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                List<int> selectedMemberIDs = new List<int>();
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    int memberID = (int)row.Cells["MemberID"].Value;
+                    selectedMemberIDs.Add(memberID);
+                }
+                if (selectedMemberIDs.Count > 0)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xóa thành viên được chọn?", "Xóa", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        Member member = new Member();
+                        bool result = member.DeleteMembers(selectedMemberIDs);
+                        if (result)
+                        {
+                            MessageBox.Show("Xóa thành công !!!");
+                            LoadMembers();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Gặp lỗi khi xóa !!!");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không có thành viên nào được chọn.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thành viên bạn muốn xóa.");
+            }
+        }
     }
 }

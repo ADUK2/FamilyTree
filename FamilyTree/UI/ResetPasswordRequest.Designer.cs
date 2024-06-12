@@ -39,20 +39,19 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(93, 58);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Location = new System.Drawing.Point(92, 72);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(76, 20);
+            this.txtEmail.Size = new System.Drawing.Size(181, 22);
             this.txtEmail.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 60);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(35, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 16);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Email:";
             // 
@@ -60,19 +59,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 120);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(35, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Code:";
             // 
             // txtVerificationCode
             // 
-            this.txtVerificationCode.Location = new System.Drawing.Point(93, 118);
-            this.txtVerificationCode.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVerificationCode.Location = new System.Drawing.Point(92, 146);
+            this.txtVerificationCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVerificationCode.Name = "txtVerificationCode";
-            this.txtVerificationCode.Size = new System.Drawing.Size(76, 20);
+            this.txtVerificationCode.Size = new System.Drawing.Size(181, 22);
             this.txtVerificationCode.TabIndex = 3;
             // 
             // btnSendCode
@@ -93,10 +91,10 @@
             this.btnSendCode.IdleFillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSendCode.IdleForecolor = System.Drawing.Color.White;
             this.btnSendCode.IdleLineColor = System.Drawing.Color.Cyan;
-            this.btnSendCode.Location = new System.Drawing.Point(222, 49);
-            this.btnSendCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSendCode.Location = new System.Drawing.Point(296, 60);
+            this.btnSendCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnSendCode.Name = "btnSendCode";
-            this.btnSendCode.Size = new System.Drawing.Size(63, 38);
+            this.btnSendCode.Size = new System.Drawing.Size(84, 47);
             this.btnSendCode.TabIndex = 5;
             this.btnSendCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
@@ -119,27 +117,27 @@
             this.btnCheckCode.IdleFillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCheckCode.IdleForecolor = System.Drawing.Color.White;
             this.btnCheckCode.IdleLineColor = System.Drawing.Color.Cyan;
-            this.btnCheckCode.Location = new System.Drawing.Point(222, 106);
-            this.btnCheckCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckCode.Location = new System.Drawing.Point(296, 130);
+            this.btnCheckCode.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnCheckCode.Name = "btnCheckCode";
-            this.btnCheckCode.Size = new System.Drawing.Size(63, 38);
+            this.btnCheckCode.Size = new System.Drawing.Size(84, 47);
             this.btnCheckCode.TabIndex = 6;
             this.btnCheckCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCheckCode.Click += new System.EventHandler(this.btnCheckCode_Click);
             // 
             // ResetPasswordRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(319, 202);
+            this.ClientSize = new System.Drawing.Size(425, 249);
             this.Controls.Add(this.btnCheckCode);
             this.Controls.Add(this.btnSendCode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtVerificationCode);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEmail);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ResetPasswordRequest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResetPasswordRequest";

@@ -346,9 +346,5 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
         private System.Windows.Forms.Label lbForgotPassword;
         private System.Windows.Forms.PictureBox pbClose;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBoxUsername;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBoxPassword;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButtonLogin;
-        private System.Windows.Forms.Label forgotpassword;
     }
 }

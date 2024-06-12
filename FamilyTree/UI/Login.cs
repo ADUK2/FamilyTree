@@ -50,7 +50,7 @@ namespace FamilyTree.UI
 
             if (isAuthenticated)
             {
-                MessageBox.Show("Login successful!");
+                MessageBox.Show("Đăng nhập thành công!");
                 // Mở form chính hoặc thực hiện các hành động khác sau khi đăng nhập thành công
                 this.Hide();
                 HomeScreen homeScreen = new HomeScreen();
@@ -58,7 +58,7 @@ namespace FamilyTree.UI
             }
             else
             {
-                MessageBox.Show("Invalid username or password. Please try again.");
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
             }
         }
     }

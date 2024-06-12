@@ -56,12 +56,32 @@ namespace FamilyTree.UI
         private void btnSave_Click(object sender, EventArgs e)
         {
             var selectedMember = (ComboBoxItem)cbMembers.SelectedItem;
+            if (selectedMember == null)
+            {
+                MessageBox.Show("Vui lòng chọn một thành viên.");
+                return;
+            }
             int memberID = selectedMember.Value;
             var selectedCause = (ComboBoxItem)cbCauses.SelectedItem;
+            if (selectedCause == null)
+            {
+                MessageBox.Show("Vui lòng chọn nguyên nhân cái chết.");
+                return;
+            }
             int causeID = selectedCause.Value;
             var selectedPlace = (ComboBoxItem)cbPlaces.SelectedItem;
+            if (selectedPlace == null)
+            {
+                MessageBox.Show("Vui lòng chọn nơi mai táng.");
+                return;
+            }
             int burialPlaceID = selectedPlace.Value;
-            DateTime dieDate = dateOfDieBox.Value;
+            DateTime? dieDate = dateOfDieBox.Value;
+            if (dieDate == null)
+            {
+                MessageBox.Show("Vui lòng chọn ngày cái chết.");
+                return;
+            }
             bool result = member.AddMemberDeath(memberID, dieDate, causeID, burialPlaceID);
             if (result)
             {
@@ -71,6 +91,7 @@ namespace FamilyTree.UI
             {
                 MessageBox.Show("Thêm thất bại!");
             }
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
