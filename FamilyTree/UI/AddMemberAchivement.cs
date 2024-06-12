@@ -44,8 +44,7 @@ namespace FamilyTree.UI
             }
         }
 
-
-        private void btn_Save_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             var selectedMember = (ComboBoxItem)cbMembers.SelectedItem;
             int memberID = selectedMember.Value;
@@ -55,14 +54,18 @@ namespace FamilyTree.UI
             bool result = member.AddAchievement(memberID, achivementID, eventDate);
             if (result)
             {
-                MessageBox.Show("Member Achivement added successfully!");
+                MessageBox.Show("Thêm thành tích thành công!");
             }
             else
             {
-                MessageBox.Show("Failed to add member achivement.");
+                MessageBox.Show("Thêm thành tích thất bại!");
             }
         }
-        
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     public class ComboBoxItem
     {

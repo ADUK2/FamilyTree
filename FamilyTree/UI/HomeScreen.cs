@@ -114,16 +114,16 @@ namespace FamilyTree.UI
             openChildForm(new SearchMembers(searchName));
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string searchName = tbSearch.Text;
-            openChildForm(new SearchMembers(searchName));
-        }
-
         private void btnListMemberDeath_Click(object sender, EventArgs e)
         {
             openChildForm(new ListMemberDeaths());
             hideSubMenu();
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            string searchName = tbSearch.Text;
+            openChildForm(new SearchMembers(searchName));
         }
     }
 }

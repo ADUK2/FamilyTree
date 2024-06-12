@@ -132,7 +132,7 @@ namespace FamilyTree.UI
             }
         }
 
-        private void btn_Save_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
             if (!CheckExistingMembers())
@@ -150,7 +150,7 @@ namespace FamilyTree.UI
                 // Kiểm tra các thông tin bắt buộc
                 if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0)
                 {
-                    MessageBox.Show("Please fill in all required fields.");
+                    MessageBox.Show("Vui lòng điền đầy đủ các trường dữ liệu!");
                     return;
                 }
 
@@ -164,12 +164,12 @@ namespace FamilyTree.UI
 
                 if (newMemberID > 0)
                 {
-                    MessageBox.Show("Member added successfully!");
+                    MessageBox.Show("Thêm thành công!");
                     LoadOldMember(); // Tải lại danh sách thành viên cũ có isRoot = 1
                 }
                 else
                 {
-                    MessageBox.Show("Failed to add member.");
+                    MessageBox.Show("Thêm thất bại!");
                 }
             }
             else
@@ -194,7 +194,7 @@ namespace FamilyTree.UI
                 // Kiểm tra các thông tin bắt buộc
                 if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0)
                 {
-                    MessageBox.Show("Please fill in all required fields.");
+                    MessageBox.Show("Vui lòng điền đầy đủ các trường dữ liệu!");
                     return;
                 }
 
@@ -206,7 +206,7 @@ namespace FamilyTree.UI
                 int generation = (relationshipTypeID == 1) ? oldMemberGeneration + 1 : oldMemberGeneration;
 
                 // Tạo đối tượng Member và thêm vào cơ sở dữ liệu
-                
+
                 int newMemberID = member.AddMember(fullName, gender, birthDate, address, occupationID, hometownID, isRoot, generation);
 
                 // Nếu thêm thành công, thêm mối quan hệ
@@ -214,18 +214,17 @@ namespace FamilyTree.UI
                 {
                     member.AddRelationship(newMemberID, oldMemberID, relationshipTypeID, eventDate);
 
-                    MessageBox.Show("Member added successfully!");
+                    MessageBox.Show("Thêm thành công!");
                     LoadOldMember(); // Tải lại danh sách thành viên cũ có isRoot = 1
                 }
                 else
                 {
-                    MessageBox.Show("Failed to add member.");
+                    MessageBox.Show("Thêm thất bại!");
                 }
             }
-
         }
 
-        private void cancelFormButton_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

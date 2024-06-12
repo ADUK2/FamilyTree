@@ -52,7 +52,8 @@ namespace FamilyTree.UI
             }
         }
 
-        private void btn_Save_Click(object sender, EventArgs e)
+
+        private void btnSave_Click(object sender, EventArgs e)
         {
             var selectedMember = (ComboBoxItem)cbMembers.SelectedItem;
             int memberID = selectedMember.Value;
@@ -64,12 +65,17 @@ namespace FamilyTree.UI
             bool result = member.AddMemberDeath(memberID, dieDate, causeID, burialPlaceID);
             if (result)
             {
-                MessageBox.Show("Member death added successfully!");
+                MessageBox.Show("Thêm thành công!");
             }
             else
             {
-                MessageBox.Show("Failed to add member death.");
+                MessageBox.Show("Thêm thất bại!");
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

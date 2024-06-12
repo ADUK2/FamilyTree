@@ -47,7 +47,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.lbResutlEmail = new System.Windows.Forms.Label();
             this.lbResult = new System.Windows.Forms.Label();
-            this.bunifuThinButtonRegister = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnRegister = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTextBoxPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBoxConfirmPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBoxEmail = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -61,7 +61,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUsername = new System.Windows.Forms.Label();
             this.lbConfirmPassword = new System.Windows.Forms.Label();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // lbResutlEmail
@@ -83,30 +85,31 @@
             this.lbResult.Size = new System.Drawing.Size(0, 16);
             this.lbResult.TabIndex = 17;
             // 
-            // bunifuThinButtonRegister
+            // btnRegister
             // 
-            this.bunifuThinButtonRegister.ActiveBorderThickness = 1;
-            this.bunifuThinButtonRegister.ActiveCornerRadius = 20;
-            this.bunifuThinButtonRegister.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButtonRegister.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButtonRegister.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButtonRegister.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButtonRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonRegister.BackgroundImage")));
-            this.bunifuThinButtonRegister.ButtonText = "Đăng Ký";
-            this.bunifuThinButtonRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButtonRegister.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButtonRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
-            this.bunifuThinButtonRegister.IdleBorderThickness = 1;
-            this.bunifuThinButtonRegister.IdleCornerRadius = 20;
-            this.bunifuThinButtonRegister.IdleFillColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuThinButtonRegister.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButtonRegister.IdleLineColor = System.Drawing.Color.Cyan;
-            this.bunifuThinButtonRegister.Location = new System.Drawing.Point(561, 416);
-            this.bunifuThinButtonRegister.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.bunifuThinButtonRegister.Name = "bunifuThinButtonRegister";
-            this.bunifuThinButtonRegister.Size = new System.Drawing.Size(286, 47);
-            this.bunifuThinButtonRegister.TabIndex = 16;
-            this.bunifuThinButtonRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegister.ActiveBorderThickness = 1;
+            this.btnRegister.ActiveCornerRadius = 20;
+            this.btnRegister.ActiveFillColor = System.Drawing.Color.Aqua;
+            this.btnRegister.ActiveForecolor = System.Drawing.Color.White;
+            this.btnRegister.ActiveLineColor = System.Drawing.Color.Aqua;
+            this.btnRegister.BackColor = System.Drawing.Color.White;
+            this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
+            this.btnRegister.ButtonText = "Đăng Ký";
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegister.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(221)))), ((int)(((byte)(74)))));
+            this.btnRegister.IdleBorderThickness = 1;
+            this.btnRegister.IdleCornerRadius = 20;
+            this.btnRegister.IdleFillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRegister.IdleForecolor = System.Drawing.Color.White;
+            this.btnRegister.IdleLineColor = System.Drawing.Color.Cyan;
+            this.btnRegister.Location = new System.Drawing.Point(561, 416);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(286, 47);
+            this.btnRegister.TabIndex = 16;
+            this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // bunifuTextBoxPassword
             // 
@@ -422,6 +425,7 @@
             // 
             this.lbBackToLogin.AutoSize = true;
             this.lbBackToLogin.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBackToLogin.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbBackToLogin.Location = new System.Drawing.Point(725, 487);
             this.lbBackToLogin.Name = "lbBackToLogin";
             this.lbBackToLogin.Size = new System.Drawing.Size(122, 24);
@@ -497,19 +501,33 @@
             this.lbConfirmPassword.Size = new System.Drawing.Size(0, 16);
             this.lbConfirmPassword.TabIndex = 21;
             // 
+            // pbClose
+            // 
+            this.pbClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbClose.BackgroundImage")));
+            this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbClose.Location = new System.Drawing.Point(852, 9);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(2);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(19, 20);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClose.TabIndex = 22;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(880, 520);
+            this.Controls.Add(this.pbClose);
             this.Controls.Add(this.lbConfirmPassword);
             this.Controls.Add(this.lbUsername);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbResutlEmail);
             this.Controls.Add(this.lbResult);
             this.Controls.Add(this.bunifuTextBoxUsername);
-            this.Controls.Add(this.bunifuThinButtonRegister);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuTextBoxPassword);
             this.Controls.Add(this.label3);
@@ -521,8 +539,10 @@
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,7 +557,7 @@
         private System.Windows.Forms.Label label7;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBoxEmail;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBoxUsername;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButtonRegister;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnRegister;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBoxPassword;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBoxConfirmPassword;
         private System.Windows.Forms.Label lbResult;
@@ -545,6 +565,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.Label lbConfirmPassword;
+        private System.Windows.Forms.PictureBox pbClose;
     }
 }
 

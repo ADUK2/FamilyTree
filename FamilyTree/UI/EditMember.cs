@@ -81,11 +81,11 @@ namespace FamilyTree.UI
             bool result = member.UpdateMember(member);
             if (result)
             {
-                MessageBox.Show("Cật nhật thành công");
+                MessageBox.Show("Cập nhật thành công");
             }
             else
             {
-                MessageBox.Show("Cật nhật thất bại");
+                MessageBox.Show("Cập nhật thất bại");
             }
             this.Close();
         }

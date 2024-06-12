@@ -77,10 +77,10 @@ namespace FamilyTree.UI
                     GROUP BY YEAR(DeathDate)
                 ) D ON Y.Nam = D.Nam
                 ORDER BY Y.Nam;";
-            }
-            else if (reportType == "Báo cáo thành tích các thành viên")
-            {
-                query = @"
+                        }
+                        else if (reportType == "Báo cáo thành tích các thành viên")
+                        {
+                            query = @"
                 SELECT 
                     a.AchievementName AS LoaiThanhTich,
                     COUNT(*) AS SoLuong
@@ -104,6 +104,5 @@ namespace FamilyTree.UI
                 dgvReport.DataSource = dataTable;
             }
         }
-
     }
 }

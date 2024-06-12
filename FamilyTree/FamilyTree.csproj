@@ -33,11 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
+<<<<<<< HEAD
       <HintPath>C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+=======
+      <HintPath>E:\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>C:\Users\phand\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>E:\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+>>>>>>> 9b6c8bd3656c42fbec726d648be87fc5b56b6add
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -46,6 +57,7 @@
     <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Account.cs" />
+    <Compile Include="Classes\EmailService.cs" />
     <Compile Include="Classes\Member.cs" />
     <Compile Include="UI\AddMemberAchivement.cs">
       <SubType>Form</SubType>
@@ -95,6 +108,18 @@
     </Compile>
     <Compile Include="UI\ListMembers.Designer.cs">
       <DependentUpon>ListMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PasswordUpdateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordUpdateDialog.Designer.cs">
+      <DependentUpon>PasswordUpdateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResetPasswordRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResetPasswordRequest.Designer.cs">
+      <DependentUpon>ResetPasswordRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SearchMembers.cs">
       <SubType>Form</SubType>
@@ -155,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ListMembers.resx">
       <DependentUpon>ListMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordUpdateDialog.resx">
+      <DependentUpon>PasswordUpdateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResetPasswordRequest.resx">
+      <DependentUpon>ResetPasswordRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SearchMembers.resx">
       <DependentUpon>SearchMembers.cs</DependentUpon>

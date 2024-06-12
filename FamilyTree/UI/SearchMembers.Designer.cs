@@ -98,19 +98,20 @@ namespace FamilyTree.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(196, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 25);
+            this.label2.Size = new System.Drawing.Size(188, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "Thông tin thành viên";
             // 
-            // MemberListForm
+            // SearchMembers
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(596, 539);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewMembers);
-            this.Name = "MemberListForm";
+            this.Name = "SearchMembers";
             this.Text = "Danh Sách Thành Viên";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMembers)).EndInit();
             this.ResumeLayout(false);

@@ -85,7 +85,7 @@
             // 
             this.lbRegister.AutoSize = true;
             this.lbRegister.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRegister.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbRegister.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbRegister.Location = new System.Drawing.Point(507, 462);
             this.lbRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRegister.Name = "lbRegister";
@@ -258,9 +258,9 @@
             // 
             this.btnLogin.ActiveBorderThickness = 1;
             this.btnLogin.ActiveCornerRadius = 20;
-            this.btnLogin.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnLogin.ActiveFillColor = System.Drawing.Color.Aqua;
             this.btnLogin.ActiveForecolor = System.Drawing.Color.White;
-            this.btnLogin.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnLogin.ActiveLineColor = System.Drawing.Color.Aqua;
             this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
             this.btnLogin.ButtonText = "Đăng Nhập";
@@ -278,20 +278,20 @@
             this.btnLogin.Size = new System.Drawing.Size(287, 47);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogin.Click += new System.EventHandler(this.bunifuThinButtonLogin_Click_1);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lbForgotPassword
             // 
             this.lbForgotPassword.AutoSize = true;
             this.lbForgotPassword.BackColor = System.Drawing.Color.White;
             this.lbForgotPassword.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbForgotPassword.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbForgotPassword.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbForgotPassword.Location = new System.Drawing.Point(678, 319);
             this.lbForgotPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbForgotPassword.Name = "lbForgotPassword";
-            this.lbForgotPassword.Size = new System.Drawing.Size(138, 24);
+            this.lbForgotPassword.Size = new System.Drawing.Size(147, 24);
             this.lbForgotPassword.TabIndex = 11;
-            this.lbForgotPassword.Text = "Quên mật khẩu";
+            this.lbForgotPassword.Text = "Quên mật khẩu?";
             this.lbForgotPassword.Click += new System.EventHandler(this.forgotpassword_Click);
             // 
             // pbClose

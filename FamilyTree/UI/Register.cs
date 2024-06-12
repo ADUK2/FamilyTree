@@ -27,27 +27,6 @@ namespace FamilyTree
             InitializeComponent();
         }
 
-        private void btn_Register_Click(object sender, EventArgs e)
-        {
-            con = new SqlConnection(@"Data Source=LAPTOP-229JBF6T;Initial Catalog=CayGiaPhaDB;Integrated Security=True");
-            
-            con.Open();
-
-            SqlCommand cnn = new SqlCommand("insert into Users values(@UserName,@PasswordHash,@FullName,@Email)",con);
-
-            cnn.Parameters.AddWithValue("@UserName", (bunifuTextBoxUsername.Text));
-            cnn.Parameters.AddWithValue("@PasswordHash", (bunifuTextBoxPassword.Text));
-            cnn.Parameters.AddWithValue("@Email", (bunifuTextBoxEmail.Text));
-
-            cnn.ExecuteNonQuery();
-
-            con.Close();
-
-            MessageBox.Show("Đăng Ký Thành Công");
-
-
-        }
-
         private void lbBackToLogin_Click(object sender, EventArgs e)
         {
             Login login = new Login();
@@ -55,45 +34,30 @@ namespace FamilyTree
             this.Hide();
         }
 
-        private void ButtonRegister_Click(object sender, EventArgs e)
-        {
-            string username = bunifuTextBoxUsername.Text;
-            string password = bunifuTextBoxPassword.Text;
-            string confirmpassword = bunifuTextBoxConfirmPassword.Text;
-            string email = bunifuTextBoxEmail.Text;
 
-            Account account = new Account();
-            try
-            {
-                account.AddAccount(username, password);
-                MessageBox.Show("Account registered successfully!");
-                this.Close(); // Đóng form đăng ký sau khi đăng ký thành công
-                //FirstTimeLogin firstTimeLogin = new FirstTimeLogin();
-                //firstTimeLogin.Show();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
 
         private void bunifuTextBoxPassword_TextChange(object sender, EventArgs e)
         {
             string password = bunifuTextBoxPassword.Text;
             bool isStrong = CheckPasswordStrength(password);
 
-            if (isStrong)
+            if (string.IsNullOrEmpty(password))
             {
-                lbResult.Text = "Mật khẩu đủ mạnh!";
-                lbResult.ForeColor = System.Drawing.Color.Green;
+                lbResult.Text = "VD: aA12345!";
+                lbResult.ForeColor = System.Drawing.Color.Red;
             }
-            else
+            else if (!isStrong)
             {
                 lbResult.Text = "Mật khẩu không đủ mạnh!";
                 lbResult.ForeColor = System.Drawing.Color.Red;
             }
+            else
+            {
+                lbResult.Text = "Mật khẩu đủ mạnh!";
+                lbResult.ForeColor = System.Drawing.Color.Green;
+            }
         }
+
 
         private bool CheckPasswordStrength(string password)
         {
@@ -153,10 +117,23 @@ namespace FamilyTree
             string username = bunifuTextBoxUsername.Text;
             bool isValid = ValidateUsername(username);
 
-            // Cập nhật label cảnh báo
-            lbUsername.Text = isValid ? "Tên người dùng hợp lệ" : "Tên người dùng không hợp lệ";
-            lbUsername.ForeColor = isValid ? System.Drawing.Color.Green : System.Drawing.Color.Red;
+            if (string.IsNullOrEmpty(username))
+            {
+                lbUsername.Text = "Tài khoản phải hơn 6 ký tự.";
+                lbUsername.ForeColor = System.Drawing.Color.Red;
+            }
+            else if (!isValid)
+            {
+                lbUsername.Text = "Tên người dùng không hợp lệ.";
+                lbUsername.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                lbUsername.Text = "Tên người dùng hợp lệ.";
+                lbUsername.ForeColor = System.Drawing.Color.Green;
+            }
         }
+
 
         private bool ValidateUsername(string username)
         {
@@ -198,6 +175,62 @@ namespace FamilyTree
         {
             // Kiểm tra xem hai mật khẩu có giống nhau hay không
             return password == confirmPassword;
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            string username = bunifuTextBoxUsername.Text;
+            string password = bunifuTextBoxPassword.Text;
+            string confirmPassword = bunifuTextBoxConfirmPassword.Text;
+            string email = bunifuTextBoxEmail.Text;
+
+            if (!ValidateUsername(username))
+            {
+                MessageBox.Show("Tên người dùng không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!CheckPasswordStrength(password))
+            {
+                MessageBox.Show("Mật khẩu không đủ mạnh!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!ConfirmPassword(password, confirmPassword))
+            {
+                MessageBox.Show("Xác nhận mật khẩu không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!ValidateEmail(email))
+            {
+                MessageBox.Show("Email không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Account account = new Account()
+            {
+                Username = username,
+                Password = password,
+                Email = email,
+            };
+            try
+            {
+                account.AddUser(account);
+                MessageBox.Show("Account registered successfully!");
+                this.Close();
+                HomeScreen homeScreen = new HomeScreen();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

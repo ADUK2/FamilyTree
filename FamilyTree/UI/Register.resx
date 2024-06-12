@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuThinButtonRegister.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnRegister.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAR4AAAAvCAYAAAA1mKVqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKbSURBVHhe7d09axRRGMVxiyxEDJslxMYiYG9haSVYCekE
@@ -1317,6 +1317,14 @@
         Gg26g4HqZjfWMzT1LXo2LOmkeNDaNe9GYEhysFZ5xCxJXEIAK7AUCC3EY3XCJ0wNIwQQoCwlfIDQ8ELn
         cCKqQBaGjg/+kAAACiUSiUSiUSiUSiUSiUSiUSiUSiUSiUSiUSiUSiGNIlyiUSiUSiUSiUSiUSiUSiUS
         iUSiUSiUSiUSiUT/2Q==
+</value>
+  </data>
+  <data name="pbClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vQAADr0BR/uQrQAAAJBJREFUSEvtlEsKgDAMRHsJ738cV668j5oRB4ZSQyR1o30Q+jGZSQu2DP7LbLFY
+        TOfKBznIRU0YFGwWq4Vngm/IQS5qwrBwv8aWSSTHRburBdLipGXS2ktBQXar87Q40a67da7oKbobqDhG
+        nadNanGsuZc+iSeUNqGAdxWRnFvw20cKaYKTPHoqXn/sBp+hlANE20WhpLY/MgAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

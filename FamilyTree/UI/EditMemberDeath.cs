@@ -81,13 +81,13 @@ namespace FamilyTree.UI
             var selectedPlace = (ComboBoxItem)cbPlaces.SelectedItem;
             int placeID = selectedPlace.Value;
             bool result = member.UpdateMemberDeath(memberDeathId, causeID, placeID);
-            if(result)
+            if (result)
             {
-                MessageBox.Show("Cật nhật thành công");
+                MessageBox.Show("Cập nhật thành công");
             }
             else
             {
-                MessageBox.Show("Cật nhật thất bại");                
+                MessageBox.Show("Cập nhật thất bại");
             }
             this.Close();
         }
