@@ -103,11 +103,13 @@ namespace FamilyTree.UI
                 EditMemberDeath formEditMemberDeath = new EditMemberDeath(memberDeathId, name);
                 formEditMemberDeath.StartPosition = FormStartPosition.CenterParent;
                 formEditMemberDeath.ShowDialog(this);
+                LoadMemberDeaths();
             }
             else
             {
                 MessageBox.Show("Hãy chọn thành viên bạn muốn chỉnh sửa.");
             }
+            
         }
     }
 }

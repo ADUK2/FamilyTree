@@ -353,7 +353,20 @@ namespace FamilyTree.Classes
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    
+
+                    // Kiểm tra xem ID thành viên đã tồn tại trong bảng MemberDeaths chưa
+                    string checkExistingQuery = "SELECT COUNT(*) FROM MemberDeaths WHERE MemberID = @MemberID";
+                    SqlCommand checkExistingCommand = new SqlCommand(checkExistingQuery, connection);
+                    checkExistingCommand.Parameters.AddWithValue("@MemberID", memberID);
+                    int existingCount = (int)checkExistingCommand.ExecuteScalar();
+
+                    // Nếu đã tồn tại, trả về false và thông báo
+                    if (existingCount > 0)
+                    {
+                        MessageBox.Show("Người này đã chết.");
+                        return false;
+                    }
+
                     // Chèn thông tin về cái chết của thành viên
                     string query = "INSERT INTO MemberDeaths (MemberID, DeathDate, CauseID, BurialPlaceID) VALUES (@MemberID, @DeathDate, @CauseID, @BurialPlaceID)";
                     SqlCommand command = new SqlCommand(query, connection);

@@ -39,7 +39,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -53,7 +53,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(147, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 35);
+            this.label1.Size = new System.Drawing.Size(381, 43);
             this.label1.TabIndex = 2;
             this.label1.Text = "Danh Sách Thành Viên";
             // 
