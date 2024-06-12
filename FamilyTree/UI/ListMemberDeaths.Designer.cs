@@ -38,12 +38,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(264, 9);
+            this.label1.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(169, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 29);
+            this.label1.Size = new System.Drawing.Size(265, 35);
             this.label1.TabIndex = 5;
-            this.label1.Text = "DANH SÁCH KẾT THÚC";
+            this.label1.Text = "Danh Sách Kết Thúc";
             // 
             // dataGridView1
             // 
@@ -51,12 +53,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 46);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 37);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(763, 492);
+            this.dataGridView1.Size = new System.Drawing.Size(572, 400);
             this.dataGridView1.TabIndex = 4;
             // 
             // btnEdit
@@ -77,24 +79,24 @@
             this.btnEdit.IdleFillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnEdit.IdleForecolor = System.Drawing.Color.White;
             this.btnEdit.IdleLineColor = System.Drawing.Color.Cyan;
-            this.btnEdit.Location = new System.Drawing.Point(626, 548);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.btnEdit.Location = new System.Drawing.Point(470, 445);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(145, 53);
+            this.btnEdit.Size = new System.Drawing.Size(109, 43);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // ListMemberDeaths
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(781, 603);
+            this.ClientSize = new System.Drawing.Size(586, 490);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ListMemberDeaths";
             this.Text = "ListMemberDeaths";
             this.Load += new System.EventHandler(this.ListMemberDeaths_Load);

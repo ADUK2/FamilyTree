@@ -49,13 +49,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(159, 9);
+            this.label1.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(147, -1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 29);
+            this.label1.Size = new System.Drawing.Size(299, 35);
             this.label1.TabIndex = 2;
-            this.label1.Text = "DANH SÁCH THÀNH VIÊN";
+            this.label1.Text = "Danh Sách Thành Viên";
             // 
             // btnEdit
             // 
