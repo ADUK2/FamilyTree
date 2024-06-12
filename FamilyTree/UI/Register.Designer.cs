@@ -70,9 +70,10 @@
             // 
             this.lbResutlEmail.AutoSize = true;
             this.lbResutlEmail.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbResutlEmail.Location = new System.Drawing.Point(640, 246);
+            this.lbResutlEmail.Location = new System.Drawing.Point(853, 303);
+            this.lbResutlEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbResutlEmail.Name = "lbResutlEmail";
-            this.lbResutlEmail.Size = new System.Drawing.Size(0, 16);
+            this.lbResutlEmail.Size = new System.Drawing.Size(0, 20);
             this.lbResutlEmail.TabIndex = 18;
             // 
             // lbResult
@@ -80,9 +81,10 @@
             this.lbResult.AutoSize = true;
             this.lbResult.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbResult.ForeColor = System.Drawing.Color.Red;
-            this.lbResult.Location = new System.Drawing.Point(640, 312);
+            this.lbResult.Location = new System.Drawing.Point(853, 384);
+            this.lbResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbResult.Name = "lbResult";
-            this.lbResult.Size = new System.Drawing.Size(0, 16);
+            this.lbResult.Size = new System.Drawing.Size(0, 20);
             this.lbResult.TabIndex = 17;
             // 
             // btnRegister
@@ -103,10 +105,10 @@
             this.btnRegister.IdleFillColor = System.Drawing.Color.DeepSkyBlue;
             this.btnRegister.IdleForecolor = System.Drawing.Color.White;
             this.btnRegister.IdleLineColor = System.Drawing.Color.Cyan;
-            this.btnRegister.Location = new System.Drawing.Point(561, 416);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRegister.Location = new System.Drawing.Point(748, 512);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(286, 47);
+            this.btnRegister.Size = new System.Drawing.Size(381, 58);
             this.btnRegister.TabIndex = 16;
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -138,7 +140,8 @@
             this.bunifuTextBoxPassword.IconRight = null;
             this.bunifuTextBoxPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxPassword.Lines = new string[0];
-            this.bunifuTextBoxPassword.Location = new System.Drawing.Point(561, 276);
+            this.bunifuTextBoxPassword.Location = new System.Drawing.Point(748, 340);
+            this.bunifuTextBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxPassword.MaxLength = 32767;
             this.bunifuTextBoxPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxPassword.Modified = false;
@@ -164,7 +167,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBoxPassword.OnIdleState = stateProperties4;
-            this.bunifuTextBoxPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBoxPassword.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxPassword.PasswordChar = '*';
             this.bunifuTextBoxPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBoxPassword.PlaceholderText = "Enter text";
@@ -174,7 +177,7 @@
             this.bunifuTextBoxPassword.SelectionLength = 0;
             this.bunifuTextBoxPassword.SelectionStart = 0;
             this.bunifuTextBoxPassword.ShortcutsEnabled = true;
-            this.bunifuTextBoxPassword.Size = new System.Drawing.Size(286, 35);
+            this.bunifuTextBoxPassword.Size = new System.Drawing.Size(381, 43);
             this.bunifuTextBoxPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBoxPassword.TabIndex = 15;
             this.bunifuTextBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -213,7 +216,8 @@
             this.bunifuTextBoxConfirmPassword.IconRight = null;
             this.bunifuTextBoxConfirmPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxConfirmPassword.Lines = new string[0];
-            this.bunifuTextBoxConfirmPassword.Location = new System.Drawing.Point(561, 348);
+            this.bunifuTextBoxConfirmPassword.Location = new System.Drawing.Point(748, 428);
+            this.bunifuTextBoxConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxConfirmPassword.MaxLength = 32767;
             this.bunifuTextBoxConfirmPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxConfirmPassword.Modified = false;
@@ -239,7 +243,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBoxConfirmPassword.OnIdleState = stateProperties8;
-            this.bunifuTextBoxConfirmPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBoxConfirmPassword.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxConfirmPassword.PasswordChar = '*';
             this.bunifuTextBoxConfirmPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBoxConfirmPassword.PlaceholderText = "Enter text";
@@ -249,7 +253,7 @@
             this.bunifuTextBoxConfirmPassword.SelectionLength = 0;
             this.bunifuTextBoxConfirmPassword.SelectionStart = 0;
             this.bunifuTextBoxConfirmPassword.ShortcutsEnabled = true;
-            this.bunifuTextBoxConfirmPassword.Size = new System.Drawing.Size(286, 35);
+            this.bunifuTextBoxConfirmPassword.Size = new System.Drawing.Size(381, 43);
             this.bunifuTextBoxConfirmPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBoxConfirmPassword.TabIndex = 14;
             this.bunifuTextBoxConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -288,7 +292,8 @@
             this.bunifuTextBoxEmail.IconRight = null;
             this.bunifuTextBoxEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxEmail.Lines = new string[0];
-            this.bunifuTextBoxEmail.Location = new System.Drawing.Point(561, 207);
+            this.bunifuTextBoxEmail.Location = new System.Drawing.Point(748, 255);
+            this.bunifuTextBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxEmail.MaxLength = 32767;
             this.bunifuTextBoxEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxEmail.Modified = false;
@@ -314,7 +319,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBoxEmail.OnIdleState = stateProperties12;
-            this.bunifuTextBoxEmail.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBoxEmail.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxEmail.PasswordChar = '\0';
             this.bunifuTextBoxEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBoxEmail.PlaceholderText = "Enter Your Email";
@@ -324,7 +329,7 @@
             this.bunifuTextBoxEmail.SelectionLength = 0;
             this.bunifuTextBoxEmail.SelectionStart = 0;
             this.bunifuTextBoxEmail.ShortcutsEnabled = true;
-            this.bunifuTextBoxEmail.Size = new System.Drawing.Size(286, 36);
+            this.bunifuTextBoxEmail.Size = new System.Drawing.Size(381, 44);
             this.bunifuTextBoxEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBoxEmail.TabIndex = 13;
             this.bunifuTextBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -363,7 +368,8 @@
             this.bunifuTextBoxUsername.IconRight = null;
             this.bunifuTextBoxUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBoxUsername.Lines = new string[0];
-            this.bunifuTextBoxUsername.Location = new System.Drawing.Point(561, 132);
+            this.bunifuTextBoxUsername.Location = new System.Drawing.Point(748, 162);
+            this.bunifuTextBoxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxUsername.MaxLength = 32767;
             this.bunifuTextBoxUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBoxUsername.Modified = false;
@@ -389,7 +395,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBoxUsername.OnIdleState = stateProperties16;
-            this.bunifuTextBoxUsername.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBoxUsername.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuTextBoxUsername.PasswordChar = '\0';
             this.bunifuTextBoxUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBoxUsername.PlaceholderText = "Enter Your Username";
@@ -399,7 +405,7 @@
             this.bunifuTextBoxUsername.SelectionLength = 0;
             this.bunifuTextBoxUsername.SelectionStart = 0;
             this.bunifuTextBoxUsername.ShortcutsEnabled = true;
-            this.bunifuTextBoxUsername.Size = new System.Drawing.Size(286, 35);
+            this.bunifuTextBoxUsername.Size = new System.Drawing.Size(381, 43);
             this.bunifuTextBoxUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBoxUsername.TabIndex = 12;
             this.bunifuTextBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -415,9 +421,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(361, 287);
+            this.label7.Location = new System.Drawing.Point(481, 353);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 24);
+            this.label7.Size = new System.Drawing.Size(123, 29);
             this.label7.TabIndex = 10;
             this.label7.Text = "Mật Khẩu:";
             // 
@@ -426,9 +433,10 @@
             this.lbBackToLogin.AutoSize = true;
             this.lbBackToLogin.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBackToLogin.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbBackToLogin.Location = new System.Drawing.Point(725, 487);
+            this.lbBackToLogin.Location = new System.Drawing.Point(967, 599);
+            this.lbBackToLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBackToLogin.Name = "lbBackToLogin";
-            this.lbBackToLogin.Size = new System.Drawing.Size(122, 24);
+            this.lbBackToLogin.Size = new System.Drawing.Size(149, 29);
             this.lbBackToLogin.TabIndex = 8;
             this.lbBackToLogin.Text = "Quay lại.......";
             this.lbBackToLogin.Click += new System.EventHandler(this.lbBackToLogin_Click);
@@ -437,9 +445,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(481, 70);
+            this.label5.Location = new System.Drawing.Point(641, 86);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(225, 31);
+            this.label5.Size = new System.Drawing.Size(289, 39);
             this.label5.TabIndex = 3;
             this.label5.Text = "Đăng Ký Tài Khoản";
             // 
@@ -447,9 +456,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(361, 219);
+            this.label4.Location = new System.Drawing.Point(481, 270);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 24);
+            this.label4.Size = new System.Drawing.Size(83, 29);
             this.label4.TabIndex = 2;
             this.label4.Text = "Email:";
             // 
@@ -457,9 +467,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(361, 357);
+            this.label3.Location = new System.Drawing.Point(481, 439);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 24);
+            this.label3.Size = new System.Drawing.Size(229, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Xác Nhận Mật Khẩu:";
             // 
@@ -467,9 +478,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(361, 143);
+            this.label2.Location = new System.Drawing.Point(481, 176);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 24);
+            this.label2.Size = new System.Drawing.Size(182, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên Đăng Nhập:";
             // 
@@ -477,8 +489,9 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(326, 520);
+            this.pictureBox1.Size = new System.Drawing.Size(435, 640);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -487,28 +500,30 @@
             // 
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.Location = new System.Drawing.Point(640, 170);
+            this.lbUsername.Location = new System.Drawing.Point(853, 209);
+            this.lbUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(0, 16);
+            this.lbUsername.Size = new System.Drawing.Size(0, 20);
             this.lbUsername.TabIndex = 20;
             // 
             // lbConfirmPassword
             // 
             this.lbConfirmPassword.AutoSize = true;
             this.lbConfirmPassword.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbConfirmPassword.Location = new System.Drawing.Point(640, 386);
+            this.lbConfirmPassword.Location = new System.Drawing.Point(853, 475);
+            this.lbConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbConfirmPassword.Name = "lbConfirmPassword";
-            this.lbConfirmPassword.Size = new System.Drawing.Size(0, 16);
+            this.lbConfirmPassword.Size = new System.Drawing.Size(0, 20);
             this.lbConfirmPassword.TabIndex = 21;
             // 
             // pbClose
             // 
             this.pbClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbClose.BackgroundImage")));
             this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbClose.Location = new System.Drawing.Point(852, 9);
-            this.pbClose.Margin = new System.Windows.Forms.Padding(2);
+            this.pbClose.Location = new System.Drawing.Point(1136, 11);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(19, 20);
+            this.pbClose.Size = new System.Drawing.Size(25, 25);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 22;
             this.pbClose.TabStop = false;
@@ -516,10 +531,10 @@
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(880, 520);
+            this.ClientSize = new System.Drawing.Size(1173, 640);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.lbConfirmPassword);
             this.Controls.Add(this.lbUsername);
@@ -538,6 +553,7 @@
             this.Controls.Add(this.lbBackToLogin);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";

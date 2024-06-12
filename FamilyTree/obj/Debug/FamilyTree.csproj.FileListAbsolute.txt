@@ -24,7 +24,6 @@ D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.
 D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.Up2Date
 D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe
 D:\Family_Tree\FamilyTree\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
-C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\Bunifu.Licensing.dll
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe.licenses
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.ListMemberDeaths.resources
 C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.EditMemberDeath.resources
@@ -102,3 +101,14 @@ E:\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CoreCompileInputs.cache
 E:\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CopyComplete
 E:\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe
 E:\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\FamilyTree.exe.config
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\FamilyTree.exe
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\FamilyTree.pdb
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.PasswordUpdateDialog.resources
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.UI.ResetPasswordRequest.resources
+C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.Up2Date

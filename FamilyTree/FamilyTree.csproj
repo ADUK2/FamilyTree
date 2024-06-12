@@ -35,20 +35,16 @@
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
-<<<<<<< HEAD
       <HintPath>C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
-=======
-      <HintPath>E:\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>C:\Users\phand\Downloads\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+      <HintPath>C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>E:\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
->>>>>>> 9b6c8bd3656c42fbec726d648be87fc5b56b6add
+      <HintPath>C:\Users\Administrator\Desktop\FamilyTree\FamilyTree\packages\Bunifu\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FamilyTree.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace FamilyTree.UI
 {
@@ -33,13 +35,23 @@ namespace FamilyTree.UI
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT m.MemberID, m.FullName, m.BirthDate, m.Generation, " +
+                /*string query = "SELECT m.MemberID, m.FullName, m.BirthDate, m.Generation, " +
                                "CASE WHEN r.RelationshipType = 'Con' THEN p.FullName ELSE 'Không rõ' END AS Parent " +
                                "FROM Members m " +
                                "LEFT JOIN MemberRelationships mr ON m.MemberID = mr.MemberID1 " +
                                "LEFT JOIN Relationships r ON mr.RelationshipID = r.RelationshipID " +
                                "LEFT JOIN Members p ON mr.MemberID2 = p.MemberID " + // LEFT JOIN để lấy tên của cha/mẹ
-                               "WHERE m.FullName LIKE @searchName";
+                               "WHERE m.FullName LIKE @searchName";*/
+                string query = "SELECT m.MemberID, m.FullName, m.BirthDate, m.Generation, " +
+               "CASE " +
+               "   WHEN r.RelationshipType = 'Con' THEN ISNULL(p.FullName, 'Không rõ') " +
+               "   ELSE 'Không rõ' " +
+               "END AS Parent " +
+               "FROM Members m " +
+               "LEFT JOIN MemberRelationships mr ON m.MemberID = mr.MemberID2 " +
+               "LEFT JOIN Relationships r ON mr.RelationshipID = r.RelationshipID AND r.RelationshipType = 'Con' " +
+               "LEFT JOIN Members p ON mr.MemberID1 = p.MemberID " +
+               "WHERE m.FullName LIKE @searchName";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@searchName", "%" + searchName + "%");

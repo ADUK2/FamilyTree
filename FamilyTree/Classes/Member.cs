@@ -50,7 +50,57 @@ namespace FamilyTree.Classes
             }
         }
 
-        public int GetMemberGeneration(int memberID)
+        public bool DeleteMembers(List<int> memberIDs)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    foreach (int memberID in memberIDs)
+                    {
+                        // Xóa các bản ghi liên quan trong MemberRelationships
+                        string deleteRelationshipsQuery = "DELETE FROM MemberRelationships WHERE MemberID1 = @MemberID OR MemberID2 = @MemberID";
+                        SqlCommand deleteRelationshipsCommand = new SqlCommand(deleteRelationshipsQuery, connection, transaction);
+                        deleteRelationshipsCommand.Parameters.AddWithValue("@MemberID", memberID);
+                        deleteRelationshipsCommand.ExecuteNonQuery();
+
+                        // Xóa các bản ghi liên quan trong MemberAchievements
+                        string deleteAchievementsQuery = "DELETE FROM MemberAchievements WHERE MemberID = @MemberID";
+                        SqlCommand deleteAchievementsCommand = new SqlCommand(deleteAchievementsQuery, connection, transaction);
+                        deleteAchievementsCommand.Parameters.AddWithValue("@MemberID", memberID);
+                        deleteAchievementsCommand.ExecuteNonQuery();
+
+                        // Xóa các bản ghi liên quan trong MemberDeaths
+                        string deleteDeathsQuery = "DELETE FROM MemberDeaths WHERE MemberID = @MemberID";
+                        SqlCommand deleteDeathsCommand = new SqlCommand(deleteDeathsQuery, connection, transaction);
+                        deleteDeathsCommand.Parameters.AddWithValue("@MemberID", memberID);
+                        deleteDeathsCommand.ExecuteNonQuery();
+
+                        // Xóa bản ghi trong Members
+                        string deleteMemberQuery = "DELETE FROM Members WHERE MemberID = @MemberID";
+                        SqlCommand deleteMemberCommand = new SqlCommand(deleteMemberQuery, connection, transaction);
+                        deleteMemberCommand.Parameters.AddWithValue("@MemberID", memberID);
+                        deleteMemberCommand.ExecuteNonQuery();
+                    }
+
+                    transaction.Commit();
+                    return true;
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    return false;
+                }
+            }
+        }
+
+
+
+            public int GetMemberGeneration(int memberID)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -190,17 +240,7 @@ namespace FamilyTree.Classes
 
         }
 
-        public void DeleteMember(int id)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "DELETE FROM Members WHERE ID = @ID";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ID", id);
-                command.ExecuteNonQuery();
-            }
-        }
+        
         // Lấy danh sách thành viên
         public List<Member> GetAllMembers()
         {
@@ -285,7 +325,7 @@ namespace FamilyTree.Classes
             return achievements;
         }
         // Thêm thành tích vào cơ sở dữ liệu
-        public bool AddAchievement(int memberID, int achievementID, DateTime achievementDate)
+        public bool AddAchievement(int memberID, int achievementID, DateTime? achievementDate)
         {
             try
             {
@@ -306,7 +346,7 @@ namespace FamilyTree.Classes
             }       
         }
         // Thêm kết thúc vào cơ sở dữ liệu
-        public bool AddMemberDeath(int memberID, DateTime deathDate, int causeID, int burialPlaceID)
+        public bool AddMemberDeath(int memberID, DateTime? deathDate, int causeID, int burialPlaceID)
         {
             try
             {
@@ -350,7 +390,7 @@ namespace FamilyTree.Classes
                     command.ExecuteNonQuery();
                     return true;
                 }
-                catch (Exception ex)
+                catch 
                 {
                     // Log hoặc xử lý lỗi nếu cần
                     return false;

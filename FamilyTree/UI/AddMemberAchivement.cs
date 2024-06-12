@@ -47,10 +47,25 @@ namespace FamilyTree.UI
         private void btnSave_Click(object sender, EventArgs e)
         {
             var selectedMember = (ComboBoxItem)cbMembers.SelectedItem;
+            if (selectedMember == null)
+            {
+                MessageBox.Show("Vui lòng chọn một thành viên.");
+                return;
+            }
             int memberID = selectedMember.Value;
             var selectedAchievement = (ComboBoxItem)cbAchievements.SelectedItem;
+            if (selectedAchievement == null)
+            {
+                MessageBox.Show("Vui lòng chọn một thành tích.");
+                return;
+            }
             int achivementID = selectedAchievement.Value;
-            DateTime eventDate = dateOfEventBox.Value;
+            DateTime? eventDate = dateOfEventBox.Value;
+            if (eventDate == null)
+            {
+                MessageBox.Show("Vui lòng chọn ngày sự kiện.");
+                return;
+            }
             bool result = member.AddAchievement(memberID, achivementID, eventDate);
             if (result)
             {

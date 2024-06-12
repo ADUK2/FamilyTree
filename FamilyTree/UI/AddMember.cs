@@ -78,7 +78,7 @@ namespace FamilyTree.UI
             catch (Exception ex)
             {
                 // Xử lý ngoại lệ nếu có
-                MessageBox.Show("Error checking existing members: " + ex.Message);
+                MessageBox.Show("Không tìm thấy thành viên: " + ex.Message);
                 return false;
             }
         }
@@ -150,7 +150,7 @@ namespace FamilyTree.UI
                 // Kiểm tra các thông tin bắt buộc
                 if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0)
                 {
-                    MessageBox.Show("Vui lòng điền đầy đủ các trường dữ liệu!");
+                    MessageBox.Show("Vui lòng điền đầy đủ!");
                     return;
                 }
 
@@ -180,21 +180,21 @@ namespace FamilyTree.UI
                 DateTime birthDate = dateOfBirthBox.Value;
                 string address = tbAddress.Text;
                 var selectedHometown = (ComboBoxItem)cbHometowns.SelectedItem;
-                int hometownID = selectedHometown.Value;
+                int hometownID = selectedHometown?.Value ?? 0;
                 var selectedOccupation = (ComboBoxItem)cbOccupations.SelectedItem;
-                int occupationID = selectedOccupation.Value;
+                int occupationID = selectedOccupation?.Value ?? 0;
                 var selectedOldmember = (ComboBoxItem)cbOldmember.SelectedItem;
-                int oldMemberID = selectedOldmember.Value;
+                int oldMemberID = selectedOldmember?.Value ?? 0;
                 var selectedRelationship = (ComboBoxItem)cbRelationships.SelectedItem;
-                int relationshipTypeID = selectedRelationship.Value;
+                int relationshipTypeID = selectedRelationship?.Value ?? 0;
                 DateTime eventDate = dateOfEventBox.Value;
 
                 Member member = new Member();
 
                 // Kiểm tra các thông tin bắt buộc
-                if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0)
+                if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(gender) || hometownID == 0 || occupationID == 0 || oldMemberID == 0 || relationshipTypeID == 0)
                 {
-                    MessageBox.Show("Vui lòng điền đầy đủ các trường dữ liệu!");
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin bắt buộc!");
                     return;
                 }
 
@@ -222,7 +222,7 @@ namespace FamilyTree.UI
                     MessageBox.Show("Thêm thất bại!");
                 }
             }
-        }
+        }   
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

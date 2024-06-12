@@ -19,9 +19,6 @@ namespace FamilyTree
     public partial class Register : Form
     {
 
-        SqlCommand cnn;
-        SqlConnection con;
-
         public Register()
         {
             InitializeComponent();
@@ -222,9 +219,10 @@ namespace FamilyTree
             try
             {
                 account.AddUser(account);
-                MessageBox.Show("Account registered successfully!");
+                MessageBox.Show("Tạo tài khoản thành công!");
                 this.Close();
                 HomeScreen homeScreen = new HomeScreen();
+                homeScreen.Show();
 
             }
             catch (Exception ex)

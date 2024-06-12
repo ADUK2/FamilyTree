@@ -125,5 +125,17 @@ namespace FamilyTree.UI
             string searchName = tbSearch.Text;
             openChildForm(new SearchMembers(searchName));
         }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }
